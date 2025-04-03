@@ -1,0 +1,243 @@
+/* General Styling */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9fbfd;
+}
+
+/* Header Section */
+.about-header {
+    width: 100%;
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Center the Square Card */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Styled Square Card (Centered) */
+.square-container {
+    width: 280px;
+    height: 220px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-top: 5px solid #2575fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
+/* Cards */
+.info-card {
+    width: 280px;
+    height: 220px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-top: 5px solid #2575fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Icons */
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #2575fc;
+}
+
+/************/
+/* Additional Content Section */
+.additional-content {
+    width: 100%;
+    padding: 50px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+/* Section Titles */
+.additional-content h2 {
+    color: #2575fc;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Vision Section */
+.vision-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.vision-section p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Values Section */
+.values-section {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Container for Value Cards */
+.values-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual Value Cards */
+.value-card {
+    background: #ffffff;
+    border-top: 5px solid #2575fc;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover Effect for Cards */
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons for Value Cards */
+.value-card .icon {
+    font-size: 40px;
+    color: #2575fc;
+    margin-bottom: 10px; /* Space between icon and title */
+}
+
+/* Titles inside Cards */
+.value-card h3 {
+    color: #2575fc;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Description inside Cards */
+.value-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+}
+
+.team-section p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Team Members Grid */
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Team Member Card */
+.team-member {
+    background: #fff;
+    border-top: 5px solid #2575fc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Member Image */
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #2575fc;
+    
+}
+
+/* Team Member Name */
+.team-member h4 {
+    color: #2575fc;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Team Member Position */
+.team-member p {
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+}

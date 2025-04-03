@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Centering Validation Form */
+.validation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Quiz Container */
+.quiz-container, .quiz-box, .result-box {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  align-items: center; 
+  height: auto;
+  min-height: 400px;
+  padding: 20px;
+}
+
+.quiz-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Quiz Card */
+.quiz-card {
+  
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 320px;
+  margin: 20px auto;
+}
+
+.quiz-card h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Start Button */
+.start-btn {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.start-btn:hover {
+  background: #6a11cb;
+}
+
+/* Quiz Box */
+.quiz-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 420px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-box h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.quiz-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Option Buttons */
+.option-btn {
+  background: #fff;
+  color: #333;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.option-btn:hover {
+  background: #2575fc;
+  color: #fff;
+}
+
+.option-btn.selected {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Next Button */
+.next-btn {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: #6a11cb;
+}
+
+/* Result Box */
+.result-box {
+  background: rgba(255, 255, 255, 0.2); /* Softer background */
+  padding: 40px;
+  border-radius: 20px; /* Rounded corners for elegance */
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
+  backdrop-filter: blur(15px); /* More blur for a modern look */
+  width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.25); /* Slightly transparent border */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Result Title */
+.result-box h2 {
+  font-size: 30px; /* Larger and bolder */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffbc00; /* Vibrant color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Text shadow for emphasis */
+}
+
+/* Score Display */
+.result-score {
+  font-size: 32px; /* Larger font for score */
+  font-weight: 700; /* Bold score */
+  margin: 20px 0;
+  padding: 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  width: 80%;
+  text-align: center;
+  color: white; /* White text on gradient background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow */
+}
+
+/* Correct Answer Highlight */
+.result-box .correct {
+  font-size: 18px;
+  font-weight: 600;
+  color: #28a745; /* Green color for correct answers */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* Incorrect Answer Highlight */
+.result-box .incorrect {
+  font-size: 18px;
+  font-weight: 600;
+  color: #dc3545; /* Red color for incorrect answers */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* List of Questions */
+.result-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.result-box ul li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1); /* Light background for list items */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Result Box Hover Effect */
+.result-box:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Validation Form */
+.validation-form {
+  background:white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stylish Input Fields */
+.validation-form input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: black;
+  transition: 0.3s ease-in-out;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.validation-form input::placeholder {
+  color: black;
+  font-size: 14px;
+}
+
+/* Focus Effect */
+.validation-form input:focus {
+  outline: none;
+  border-color: #6a11cb;
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Error Message */
+.validation-error {
+  color: #ff4c4c;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Validation Button */
+.validation-btn {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.validation-btn:hover {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}

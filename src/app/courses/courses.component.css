@@ -1,0 +1,88 @@
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .course-card {
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 15px;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-image {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+  }
+  
+  .course-details {
+    padding: 20px;
+  }
+  
+  .course-title {
+    font-size: 26px;
+    margin: 12px 0;
+  }
+  
+  .course-description {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .course-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #27ae60;
+  }
+  
+  .course-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  
+  .enroll-btn,
+  .explore-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    flex: 1;
+    margin: 0 6px;
+  }
+  
+  .enroll-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .explore-btn {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .explore-btn:hover {
+    background-color: #27ae60;
+  }
+  

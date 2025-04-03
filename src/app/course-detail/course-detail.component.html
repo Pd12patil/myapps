@@ -1,0 +1,1510 @@
+<div class="course-detail-container">
+  <!-- <h2>Course Details</h2>
+    <p>Showing details for Course ID: {{ courseId }}</p> -->
+  <!-- <h3>Syllabus</h3> -->
+  <ul>
+    <!-- <li *ngIf="courseId === 1">Introduction to Angular</li> -->
+    <!-- <li *ngIf="courseId === 1"> -->
+
+    <!-- </li> -->
+    <!-- <li *ngIf="courseId === 2">React Basics</li>
+    <li *ngIf="courseId === 2">State Management</li>
+    <li *ngIf="courseId === 2"></li> -->
+
+    <!-- <li *ngIf="courseId === 5">  -->
+    <!-- </li> -->
+  </ul>
+
+  <div class="main-con" *ngIf="courseId === 1">
+    <!-- First Container with First Button and Information -->
+    <div class="container">
+      <!-- Button with dynamic text -->
+      <button (click)="toggleInfo('first')">
+        <h1>Introduction to Angular v16</h1>
+        <!-- {{ showInfo.first ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+
+      <section *ngIf="showInfo.first">
+        <h2>What is Angular?</h2>
+        <p>
+          Angular is a TypeScript-based frontend framework for building dynamic
+          web applications. It is maintained by Google and a community of
+          developers. You can use Angular to create single-page applications
+          (SPAs) or complex web apps with rich features.
+        </p>
+      </section>
+
+      <section *ngIf="showInfo.first">
+        <h2>What Angular Does</h2>
+        <p>
+          <strong>It's a Framework:</strong> Angular is a full-fledged
+          framework, unlike React, which is just a library. It provides
+          everything you need to build a robust web application, including tools
+          for routing, forms, HTTP requests, and more.
+        </p>
+        <p>
+          <strong>Developed by Google:</strong> Angular is developed and
+          maintained by Google, ensuring it's backed by an active community and
+          enterprise support.
+        </p>
+        <p>
+          <strong>Component-Based Development:</strong> Like React, Angular is
+          also component-based. This means you build your app using reusable and
+          standalone components that have their own logic and templates.
+        </p>
+        <p>
+          <strong>Modular:</strong> Angular is designed around modules, which
+          help organize and structure an application. This helps in managing
+          dependencies and keeping your codebase clean.
+        </p>
+      </section>
+
+      <section *ngIf="showInfo.first">
+        <h2>Awesome Features of Angular</h2>
+        <ul>
+          <li>
+            <strong>Component-Based Architecture:</strong> Angular uses a
+            component-based architecture, meaning you break down your
+            application into components that represent different parts of the
+            UI.
+          </li>
+          <li>
+            <strong>Two-Way Data Binding:</strong> Angular’s two-way data
+            binding automatically synchronizes data between the model and the
+            view. When the model changes, the view updates, and vice versa.
+          </li>
+          <li>
+            <strong>Fast:</strong> Angular provides high performance, especially
+            in complex applications, by using efficient change detection and
+            other optimizations.
+          </li>
+          <li>
+            <strong>Dependency Injection:</strong> Angular’s dependency
+            injection system allows you to manage and inject services and
+            components into each other, promoting modularity and testing.
+          </li>
+          <li>
+            <strong>TypeScript:</strong> Angular uses TypeScript, which adds
+            static typing to JavaScript. TypeScript helps developers catch
+            errors early and improves code readability.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Second Container with Second Button and Information -->
+    <div class="container">
+      <!-- Button with dynamic text for second container -->
+      <button (click)="toggleInfo('second')">
+        <h1>Create an Angular App</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+      <div style="display: flex; flex-wrap: wrap">
+        <section *ngIf="showInfo.second">
+          <h2>Some Handy Terms</h2>
+          <p>
+            <strong><code>npm</code> (Node Package Manager):</strong>
+            <code>npm</code> is a package manager for JavaScript and TypeScript
+            libraries, and Angular uses it to install and manage dependencies.
+          </p>
+          <p>
+            <strong><code>ng</code> (Angular CLI):</strong> The Angular CLI is a
+            command-line interface that simplifies development tasks like
+            creating components, services, and running a local server for
+            development.
+          </p>
+        </section>
+
+        <section *ngIf="showInfo.second">
+          <!-- <h2>Create an Angular App</h2> -->
+          <ol>
+            <li>Create a folder and name it <code>First_Flight</code>.</li>
+            <li>Open it in VS Code or your favorite text editor.</li>
+            <li>
+              Install Angular CLI globally on your system by running:
+              <pre class="command">npm install -g @angular/cli</pre>
+            </li>
+            <li>
+              Create a new Angular application by running:
+              <pre class="command">ng new first_flight</pre>
+            </li>
+            <li>
+              Answer any prompts, such as whether you want to use routing or
+              select a stylesheet format.
+            </li>
+            <li>
+              Once the app is created, navigate to the folder:
+              <pre class="command">cd first_flight</pre>
+            </li>
+            <li>
+              Start the development server by running:
+              <pre class="command">ng serve</pre>
+              This will compile your Angular project and serve it at
+              <code>http://localhost:4200</code>.
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Button to toggle visibility of course details -->
+      <button (click)="toggleInfo('third')">
+        <h1>Explanation of Folders and Files</h1>
+        <!-- {{ showInfo ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+
+      <!-- Conditional sections that show based on the `showInfo` flag -->
+      <section *ngIf="showInfo.third" class="course-description">
+        <h2>src/ Directory:</h2>
+        <p>
+          This is the source directory containing all your application code.
+        </p>
+      </section>
+
+      <section *ngIf="showInfo.third" class="angular-usage">
+        <h2>app/ Directory:</h2>
+        <ul>
+          <li>
+            <strong>It's a Framework:</strong> This contains all of your Angular
+            application’s core code, including components, services, and
+            modules.
+          </li>
+          <li>
+            <strong>course-detail/:</strong> This is an example of a feature
+            module for the course detail page of your app.
+            course-detail.component.ts contains the component logic (TypeScript
+            code). course-detail.component.html contains the template (HTML
+            markup). course-detail.component.css contains the styles for the
+            component. course-detail.component.spec.ts contains unit tests for
+            this component.
+          </li>
+          <li>
+            <strong>Modular:</strong> Angular organizes your app into modules,
+            helping with dependency management and code structure.
+          </li>
+        </ul>
+      </section>
+
+      <section *ngIf="showInfo.third" class="features-list">
+        <h2>Awesome Features of Angular</h2>
+        <ul>
+          <li>
+            <strong>Component-Based Architecture:</strong> Breaks your app into
+            reusable components.
+          </li>
+          <li>
+            <strong>Two-Way Data Binding:</strong> Syncs data automatically
+            between the model and view.
+          </li>
+          <li>
+            <strong>Fast:</strong> Efficient change detection and performance
+            optimizations for complex apps.
+          </li>
+          <li>
+            <strong>Dependency Injection:</strong> Injects services and
+            components for modularity.
+          </li>
+          <li>
+            <strong>TypeScript:</strong> Helps catch errors early and improves
+            code quality.
+          </li>
+        </ul>
+      </section>
+
+      <section *ngIf="showInfo.third" class="useful-terms">
+        <h2>Some Handy Terms</h2>
+        <p>
+          <strong><code>npm</code> (Node Package Manager):</strong> A package
+          manager for JavaScript, used to manage dependencies in Angular
+          projects.
+        </p>
+        <p>
+          <strong><code>ng</code> (Angular CLI):</strong> A command-line tool to
+          scaffold and manage Angular applications and components.
+        </p>
+      </section>
+
+      <section *ngIf="showInfo.third" class="creating-angular-app">
+        <h2>Create an Angular App</h2>
+        <ol>
+          <li>Create a folder and name it <code>First_Flight</code>.</li>
+          <li>Open it in VS Code or your favorite editor.</li>
+          <li>
+            Install Angular CLI globally with:
+            <pre><code>npm install -g @angular/cli</code></pre>
+          </li>
+          <li>
+            Create a new Angular app:
+            <pre><code>ng new first_flight</code></pre>
+          </li>
+          <li>
+            Navigate to the folder:
+            <pre><code>cd first_flight</code></pre>
+          </li>
+          <li>
+            Start the development server:
+            <pre><code>ng serve</code></pre>
+            Visit <code>http://localhost:4200</code> in your browser.
+          </li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <!-- Introduction to javascript -->
+
+  <div class="main-con" *ngIf="courseId === 5">
+    <div class="container">
+      <button (click)="toggleInfo('second')">
+        <h1>Introduction to javascript</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+
+      <section *ngIf="showInfo.second">
+        <h2 class="title">🤔 What is JavaScript?</h2>
+        <p class="description">
+          JavaScript is a dynamic programming language, a scripting language
+          used to develop web applications, games, and more. It allows us to
+          implement dynamic features on web pages that cannot be done with just
+          HTML and CSS. JavaScript is supported by all browsers.
+        </p>
+        <blockquote class="quote">
+          Brendan Eich invented JavaScript in 1995.
+        </blockquote>
+
+        <h3 class="subheading">Where does JavaScript run?</h3>
+        <p class="description">
+          JavaScript mainly runs in web browsers that have built-in engines to
+          interpret and execute JavaScript code. JavaScript isn't just for web
+          browsers; it also runs in Node.js, which provides a runtime
+          environment that allows JavaScript to run.
+        </p>
+
+        <h4 class="subheading">JavaScript Engines with Different Browsers</h4>
+        <ul class="browser-engines">
+          <li>
+            Chrome uses V8 JavaScript engine and it is known for speed and
+            efficiency.
+          </li>
+          <li>Safari uses JavaScriptCore engine, developed by Apple.</li>
+          <li>
+            Mozilla Firefox uses SpiderMonkey JavaScript engine, developed by
+            the Mozilla Foundation.
+          </li>
+          <li>
+            Microsoft Edge uses the Chakra JavaScript engine, but with its
+            transition to Chromium, it now also relies on the V8 engine.
+          </li>
+        </ul>
+
+        <h3 class="subheading">What is the Console?</h3>
+        <p class="description">
+          The <code class="inline-code">console</code> is a global object with
+          different methods such as <code class="inline-code">log</code>,
+          <code class="inline-code">warn</code>, and
+          <code class="inline-code">error</code>. These methods are commonly
+          used for logging information, debugging, and outputting messages to
+          the console.
+        </p>
+
+        <h3 class="subheading">
+          1. <code class="inline-code">console.log()</code>
+        </h3>
+        <p class="description">
+          <code class="inline-code">console.log()</code> is a built-in
+          JavaScript function used to display messages, variables, or other
+          information in the browser's console. It's commonly used for debugging
+          and providing insights into the behavior of JavaScript code.
+        </p>
+
+        <h4 class="subheading">Code Example</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+              &lt;script&gt;
+                  console.log('Normal message');
+              &lt;/script&gt;
+          &lt;/body&gt;
+
+          &lt;/html&gt;
+      </code>
+  </pre>
+        <img class="output-image" src="./assets/javascript/01/output-4.png" alt="output-1" width="800px" />
+
+        <h3 class="subheading">
+          2. <code class="inline-code">console.warn()</code>
+        </h3>
+        <p class="description">
+          <code class="inline-code">console.warn()</code> is a built-in
+          JavaScript function similar to
+          <code class="inline-code">console.log()</code>, but it’s used to
+          display warning messages in the browser's console. It's useful when
+          you want to highlight potential issues or noteworthy events in your
+          code.
+        </p>
+
+        <h4 class="subheading">Code Example</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+              &lt;script&gt;
+                  console.warn('Warning: This is a warning message!');
+              &lt;/script&gt;
+          &lt;/body&gt;
+
+          &lt;/html&gt;
+      </code>
+  </pre>
+        <img class="output-image" src="./assets/javascript/01/output-5.png" alt="output-1" width="800px" />
+
+        <h3 class="subheading">
+          3. <code class="inline-code">console.error()</code>
+        </h3>
+        <p class="description">
+          <code class="inline-code">console.error()</code> is a built-in
+          JavaScript function similar to
+          <code class="inline-code">console.log()</code>, but it is specifically
+          used to display error messages in the browser's console. It's used to
+          signify critical issues or unexpected occurrences in your codebase.
+        </p>
+
+        <h4 class="subheading">Code Example</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+              &lt;script&gt;
+                  console.error('Error: This is an error message!');
+              &lt;/script&gt;
+          &lt;/body&gt;
+
+          &lt;/html&gt;
+      </code>
+  </pre>
+        <img class="output-image" src="./assets/javascript/01/output-6.png" alt="output-1" width="800px" />
+
+        <h3 class="subheading">What is Document?</h3>
+        <p class="description">
+          The <code class="inline-code">document</code> object (DOM) represents
+          the HTML document loaded in the browser. It provides a way to interact
+          with and manipulate the content and structure of the web page. It has
+          various methods like <code class="inline-code">write()</code>, etc.
+        </p>
+
+        <h3 class="subheading">Linking JavaScript with HTML</h3>
+
+        <h4 class="subheading">1. Internal JavaScript</h4>
+        <p class="description">
+          You can add JavaScript before the closing
+          <code class="inline-code">&lt;/body&gt;</code> tag in HTML elements,
+          then use this script tag.
+        </p>
+
+        <h4 class="subheading">Code Example</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;title&gt;JavaScript is ❤️&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;script&gt;
+                document.write("Hello World");
+              &lt;/script&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+      </code>
+  </pre>
+        <img class="output-image" src="./assets/javascript/01/output-1.jpg" alt="output-1" width="800px" />
+
+        <h4 class="subheading">2. External JavaScript</h4>
+        <p class="description">
+          While linking the JS file with HTML, always use the
+          <code class="inline-code">.js</code> extension. This tells the browser
+          to get and run the JavaScript code from a file called
+          <code class="inline-code">script.js</code>.
+        </p>
+
+        <h4 class="subheading">HTML File</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;title&gt;JavaScript is ❤️&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;script src="script.js"&gt;&lt;/script&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+      </code>
+  </pre>
+
+        <h4 class="subheading">JavaScript File</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          document.write("Hello World");
+      </code>
+  </pre>
+        <img class="output-image" src="./assets/javascript/01/output-1.jpg" alt="output-1" width="800px" />
+
+        <h3 class="subheading">What is Window?</h3>
+        <p class="description">
+          The <code class="inline-code">window</code> object represents the
+          global context in which the JavaScript code runs within a web browser.
+          It provides a variety of properties and methods for interacting with
+          the browser window and the web page.
+        </p>
+
+        <h3 class="subheading"><code class="inline-code">alert()</code></h3>
+        <p class="description">
+          The <code class="inline-code">alert()</code> function is a built-in
+          JavaScript function that displays a simple dialog box or popup in the
+          user's web browser with a specified message.
+        </p>
+
+        <h4 class="subheading">Code Example</h4>
+        <pre class="code-example">
+      <code class="code-snippet">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+              &lt;script&gt;
+                  alert('Hey there!')
+              &lt;/script&gt;
+          &lt;/body&gt;
+
+          &lt;/html&gt;
+      </code>
+  </pre>
+        <img class="output-image" src="./assets/javascript/01/output-2.png" alt="output-1" width="800px" />
+
+        <h3 class="subheading"><code class="inline-code">prompt()</code></h3>
+        <p class="description">
+          The <code class="inline-code">prompt()</code> method displays a dialog
+          box that prompts the user for input. It includes a text field where
+          the user can enter a response.
+        </p>
+
+        <h3 class="subheading"><code class="inline-code">confirm()</code></h3>
+        <p class="description">
+          The <code class="inline-code">confirm()</code> method displays a
+          dialog box with a specified message and OK/Cancel buttons. It is used
+          to ask the user to confirm or reject an action.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('first')">
+        <h1>Datatypes and Variables</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+      <section *ngIf="showInfo.first">
+        <header class="header">
+          <h1 class="title">Datatypes and Variables</h1>
+          <p class="description"><strong>Datatypes and Variables</strong></p>
+        </header>
+
+        <section class="datatypes">
+          <h2 class="section-title">Primitive Data Types</h2>
+          <ol class="datatype-list">
+            <li><strong>String</strong></li>
+            <li>
+              <strong>Number</strong>
+              <small>{{ "{" }}int, float{{ "}" }}</small>
+            </li>
+            <li><strong>Boolean</strong></li>
+          </ol>
+
+          <img class="output-image" src="./assets/javascript/02/output-1.jpg" alt="output-1" width="600px" />
+          <p class="note">
+            <em>CHECK BELOW TO KNOW ALL THE DATA TYPES 👇</em>
+          </p>
+
+          <!-- String Section -->
+          <section class="datatype-section">
+            <h3 class="datatype-heading">1. String</h3>
+            <p>A string is a data type used to represent textual data...</p>
+            <pre><code class="example-code">"Hello, I'm a string"</code></pre>
+            <pre><code class="example-code">'Hello, How are you...'</code></pre>
+            <img class="output-image" src="./assets/javascript/02/output-2.jpg" alt="output-2" width="600px" />
+          </section>
+
+          <!-- Number Section -->
+          <section class="datatype-section">
+            <h3 class="datatype-heading">2. Number</h3>
+            <p>
+              It represents numeric values, both integer and floating-point
+              numbers...
+            </p>
+            <h4 class="datatype-subheading">a. Int</h4>
+            <pre><code class="example-code">123456</code></pre>
+            <img class="output-image" src="./assets/javascript/02/output-3.jpg" alt="output-3" width="600px" />
+            <h4 class="datatype-subheading">b. Float</h4>
+            <pre><code class="example-code">8793.90</code></pre>
+            <img class="output-image" src="./assets/javascript/02/output-4.jpg" alt="output-4" width="600px" />
+          </section>
+
+          <!-- Boolean Section -->
+          <section class="datatype-section">
+            <h3 class="datatype-heading">3. Boolean</h3>
+            <pre><code class="example-code">true or false</code></pre>
+            <img class="output-image" src="./assets/javascript/02/output-5.jpg" alt="output-5" width="600px" />
+          </section>
+        </section>
+
+        <section class="javascript-engine">
+          <h2 class="section-title">What is JavaScript Engine?</h2>
+          <p>
+            A JavaScript engine is responsible for executing JavaScript code...
+          </p>
+        </section>
+
+        <section class="variables">
+          <h2 class="section-title">Variables in JavaScript</h2>
+          <p>
+            A variable is used to store data. There are three keywords to
+            declare variables:
+          </p>
+          <ul class="keywords-list">
+            <li><strong>let</strong></li>
+            <li><strong>const</strong></li>
+            <li><strong>var</strong></li>
+          </ul>
+
+          <p><strong>Syntax:</strong></p>
+          <pre><code class="syntax-code">keyword variableName;</code></pre>
+          <p><strong>Example:</strong></p>
+          <pre><code class="example-code">let age;</code></pre>
+
+          <p>In the above example...</p>
+        </section>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('third')">
+        <h1>Template String</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+      <section *ngIf="showInfo.third">
+        <header class="header">
+          <h1 class="title">Template String</h1>
+          <p class="description"><strong>Template String</strong></p>
+        </header>
+
+        <section class="template-string">
+          <h2 class="section-title">Template String Usage</h2>
+
+          <p>
+            Template strings are a way to create strings in JavaScript that
+            allow for easy embedding of variables and expressions. They are
+            enclosed by backticks (\`) and allow placeholders
+            <code>$｛ ｝</code>
+            to insert variables or expressions directly into the string.
+          </p>
+
+          <h3 class="section-subtitle">Basic Usage</h3>
+
+          <p>Here’s a basic example of using template strings:</p>
+
+          <pre class="code-example">
+        <code class="code-snippet">
+        let age = 21;
+        let name = "Pratik";
+        console.log(`Age: $｛age｝, Name: $｛name｝`)
+        <!-- <script>
+        console.log(`Age: \${age}, Name: \${name}`);
+        </script> -->
+      </code></pre>
+
+          <p><strong>Output:</strong></p>
+          <p>Age: 21<br />Name: Pratik</p>
+
+          <h3 class="section-subtitle">Expressions</h3>
+          <p>You can also include expressions inside placeholders:</p>
+
+          <pre><code class="example-code">
+      let a = 10;
+      let b = 5;
+      console.log(`The sum of ｛｛a｝｝ and ｛｛b｝｝ is ｛｛a + b｝｝`);
+      </code></pre>
+
+          <p><strong>Output:</strong></p>
+          <p>The sum of 10 and 5 is 15.</p>
+        </section>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('four')">
+        <h1>Operators in JavaScript</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+      <section *ngIf="showInfo.four">
+        <h1 class="title">Operators in JavaScript</h1>
+        <p class="description">
+          Operators are used to perform certain operations on one or more values
+          or variables.
+        </p>
+
+        <h2 class="section-title">Operand</h2>
+        <p>Operands are values or variables on which operation is performed.</p>
+
+        <h3>Some common types of operators include:</h3>
+        <ul>
+          <li>Arithmetic operators (+, -, *, /, %)</li>
+          <li>Assignment operators (=, +=, -=, *=, /=)</li>
+          <li>
+            Increment & Decrement operators (var++, ++var), (var--, --var)
+          </li>
+          <li>Comparison operators (<,>, <=,>=, ==, ===, !=)</li>
+          <li>
+            Logical operators (&& (logical AND), || (logical OR), ! (logical
+            NOT))
+          </li>
+          <li>Other operators (typeof, Comma, String, Dot)</li>
+        </ul>
+
+        <h2 class="section-title">Arithmetic Operators</h2>
+
+        <h3>1. Addition Operator (+)</h3>
+        <p>
+          The addition operator (<code>+</code>) is used to add two numbers
+          together.
+        </p>
+        <pre><code>const a = 10; const b = 20; const result = a + b; document.write(result);</code></pre>
+        <p><strong>Output:</strong> <span class="output">30</span></p>
+
+        <h3>2. Subtraction Operator (-)</h3>
+        <p>
+          The subtraction operator (<code>-</code>) subtracts one number from
+          another.
+        </p>
+        <pre><code>const a = 10; const b = 20; const result = a - b; document.write(result);</code></pre>
+        <p><strong>Output:</strong> <span class="output">-10</span></p>
+
+        <h3>3. Multiplication Operator (*)</h3>
+        <p>
+          The multiplication operator (<code>*</code>) multiplies two numbers.
+        </p>
+        <pre><code>const a = 8; const b = 5; const result = a * b; document.write(result);</code></pre>
+        <p><strong>Output:</strong> <span class="output">40</span></p>
+
+        <h3>4. Division Operator (/)</h3>
+        <p>
+          The division operator (<code>/</code>) divides one number by another.
+        </p>
+        <pre><code>const a = 8; const b = 5; const result = a / b; document.write(result);</code></pre>
+        <p><strong>Output:</strong> <span class="output">1.6</span></p>
+
+        <h3>5. Modulus Operator (%)</h3>
+        <p>
+          The modulus operator (<code>%</code>) returns the remainder of a
+          division operation.
+        </p>
+        <pre><code>const a = 10; const b = 3; const result = a % b; document.write(result);</code></pre>
+        <p><strong>Output:</strong> <span class="output">1</span></p>
+
+        <h2 class="section-title">Assignment Operators</h2>
+
+        <h3>1. Equals to (=)</h3>
+        <p>
+          The equals to operator (<code>=</code>) assigns a value to a variable.
+        </p>
+        <pre><code>const result = 50; document.write(result);</code></pre>
+        <p><strong>Output:</strong> <span class="output">50</span></p>
+
+        <h3>2. Plus Equals to (+=)</h3>
+        <p>
+          The plus equals to operator (<code>+=</code>) adds a value to the
+          current value of a variable.
+        </p>
+        <pre><code>let balance = 500; balance += 20; document.write(balance);</code></pre>
+        <p><strong>Output:</strong> <span class="output">520</span></p>
+
+        <h3>3. Minus Equals to (-=)</h3>
+        <p>
+          The minus equals to operator (<code>-=</code>) subtracts a value from
+          the current value of a variable.
+        </p>
+        <pre><code>let balance = 500; balance -= 150; document.write(balance);</code></pre>
+        <p><strong>Output:</strong> <span class="output">350</span></p>
+
+        <h3>4. Multiplication Equals to (*=)</h3>
+        <p>
+          The multiplication equals to operator (<code>*=</code>) multiplies a
+          value from the current value of a variable.
+        </p>
+        <pre><code>let balance = 500; balance *= 150; document.write(balance);</code></pre>
+        <p><strong>Output:</strong> <span class="output">75000</span></p>
+
+        <h3>5. Division Equals to (/=)</h3>
+        <p>
+          The division equals to operator (<code>/=</code>) divides a value from
+          the current value of a variable.
+        </p>
+        <pre><code>let balance = 500; balance /= 150; document.write(balance);</code></pre>
+        <p><strong>Output:</strong> <span class="output">3.3333</span></p>
+
+        <h3>6. Modulus Equals to (%=)</h3>
+        <p>
+          The modulus equals to operator (<code>%=</code>) returns the modulus
+          of a value from the current value of a variable.
+        </p>
+        <pre><code>let balance = 500; balance %= 150; document.write(balance);</code></pre>
+        <p><strong>Output:</strong> <span class="output">50</span></p>
+
+        <h2 class="section-title">Increment & Decrement Operators</h2>
+
+        <h3>Increment Operator</h3>
+        <h4>Post-Increment Operator (variable++)</h4>
+        <pre><code>let num = 21; let result = num++; console.log(result); console.log(num);</code></pre>
+        <p><strong>Output:</strong> <span class="output">21, 22</span></p>
+
+        <h4>Pre-Increment Operator (++variable)</h4>
+        <pre><code>let num = 21; let result = ++num; console.log(result); console.log(num);</code></pre>
+        <p><strong>Output:</strong> <span class="output">22, 22</span></p>
+
+        <h3>Decrement Operator</h3>
+        <h4>Post-Decrement Operator (variable--)</h4>
+        <pre><code>let num = 21; let result = num--; console.log(result); console.log(num);</code></pre>
+        <p><strong>Output:</strong> <span class="output">21, 20</span></p>
+
+        <h4>Pre-Decrement Operator (--variable)</h4>
+        <pre><code>let num = 21; let result = --num; console.log(result); console.log(num);</code></pre>
+        <p><strong>Output:</strong> <span class="output">20, 20</span></p>
+
+        <h2 class="section-title">Comparison Operators</h2>
+
+        <h3>1. Equal to (==)</h3>
+        <pre><code>let a = 10; let b = 10; document.write(a == b);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
+
+        <h3>2. Strict Equal to (===)</h3>
+        <pre><code>let a = 10; let b = 10; document.write(a === b);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
+
+        <h3>3. Not Equal to (!=)</h3>
+        <pre><code>let a = 10; let b = 20; document.write(a != b);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
+
+        <h3>4. Less Than (<)</h3>
+            <pre><code>let a = 5; let b = 10; let res = a < b; document.write(res);</code></pre>
+            <p><strong>Output:</strong> <span class="output">true</span></p>
+
+            <h3>5. Greater Than (>)</h3>
+            <pre><code>let a = 50; let b = 10; let res = a > b; document.write(res);</code></pre>
+            <p><strong>Output:</strong> <span class="output">true</span></p>
+
+            <h3>6. Less Than or Equal to (<=)</h3>
+                <pre><code>let a = 5; let b = 10; let res = a <= b; document.write(res);</code></pre>
+                <p><strong>Output:</strong> <span class="output">true</span></p>
+
+                <h3>7. Greater Than or Equal to (>=)</h3>
+                <pre><code>let a = 50; let b = 10; let res = a >= b; document.write(res);</code></pre>
+                <p><strong>Output:</strong> <span class="output">true</span></p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('five')">
+        <h1>Ternary Operator</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+      <section *ngIf="showInfo.five">
+        <h1 class="title">Ternary Operator</h1>
+        <p class="description">
+          The <strong>ternary operator</strong>, also known as the
+          <strong>conditional operator</strong>, is an easy way to write simple
+          conditional expressions. It provides a concise way to evaluate a
+          condition and return one of two values based on whether the condition
+          is true or false.
+        </p>
+
+        <h2 class="section-title">Syntax</h2>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>(condition) ? expressionIfTrue : expressionIfFalse</code></pre>
+
+        <h2 class="section-title">How it works:</h2>
+        <ol>
+          <li>The <strong>condition</strong> is evaluated.</li>
+          <li>
+            If the <strong>condition</strong> is true, the value of
+            <strong>expressionIfTrue</strong> is returned.
+          </li>
+          <li>
+            If the <strong>condition</strong> is false, the value of
+            <strong>expressionIfFalse</strong> is returned.
+          </li>
+        </ol>
+
+        <h2 class="section-title">Example 1</h2>
+        <p>Check if a number is even or odd:</p>
+        <pre><code>
+        let num = 10;
+        num % 2 == 0 ? console.log('Even') : console.log('Odd');
+      </code></pre>
+        <p><strong>Output:</strong> <span class="output">Even</span></p>
+
+        <h2 class="section-title">Example 2</h2>
+        <p>Check if a number is even or odd:</p>
+        <pre><code>
+        let num = 7;
+        num % 2 == 0 ? console.log('Even') : console.log('Odd');
+      </code></pre>
+        <p><strong>Output:</strong> <span class="output">Odd</span></p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('six')">
+        <h1>Prompt() and Confirm() Function</h1>
+        <!-- {{ showInfo.second ? 'Hide Information' : 'Show More Information' }} -->
+      </button>
+      <section *ngIf="showInfo.six">
+        <h1 class="title">Prompt() and Confirm() Function</h1>
+        <p class="description">
+          The <code>prompt()</code> and <code>confirm()</code> functions are
+          browser APIs and built-in functions of JavaScript.
+          <code>confirm()</code> is used to get confirmation (cancel/ok) from
+          the user, while <code>prompt()</code> is used to get input from the
+          user.
+        </p>
+
+        <h2 class="section-title">confirm()</h2>
+        <p>
+          The <code>confirm()</code> function is used to give confirmation
+          (cancel/ok) from the user. When you give positive or negative feedback
+          from the user, you can use the <code>confirm()</code> function. When
+          the user clicks the OK button, it returns true; when the user clicks
+          the Cancel button, it returns false.
+        </p>
+
+        <h3>Example 1</h3>
+        <pre class="code-example">
+        <code class="code-snippet" style="color: blue;">
+        &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;script&gt;
+              <span style="color: red;">confirm("Do you want to cancel this order?");</span>
+              &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+      </code></pre>
+        <img class="output-image" src="./assets/javascript/06/screenshot-8.png" alt="output-4" width="600px" />
+
+        <h3>Example 2</h3>
+        <pre class="code-example">
+        <code class="code-snippet">
+        &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;script&gt;
+              const response = <span style="color: red;">confirm("Do you want to cancel this order?");</span>
+              document.write(response);
+              &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        
+      </code></pre>
+        <div style="display: flex; flex-wrap: wrap">
+          <img class="output-image" src="./assets/javascript/06/screenshot-8.png" alt="output-4" width="600px" />
+          <img class="output-image" src="./assets/javascript/06/screenshot-9.png" alt="output-4" width="600px" />
+        </div>
+        <!-- <p><strong>Output:</strong> <span class="output">{{ confirmResponse }}</span></p> -->
+
+        <h2 class="section-title">prompt()</h2>
+        <p>
+          The <code>prompt()</code> function is used to take input from the
+          user. In prompt, we pass one message that shows in the prompt popup.
+        </p>
+
+        <h3>Example 1</h3>
+        <pre class="code-example">
+        <code class="code-snippet">
+        &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;script&gt;
+              const age = prompt("Enter Your Age: ");
+              document.write(age);
+              &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        
+      </code></pre>
+
+        <img class="output-image" src="./assets/javascript/06/screenshot-7.png" alt="output-4" width="600px" />
+
+        <h3>Example 2</h3>
+        <pre class="code-example">
+        <code class="code-snippet">
+        &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;script&gt;
+              const age = prompt("Enter Your Age: ");
+              document.write("You are " + age + " years old.");
+              &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        
+      </code></pre>
+
+        <img class="output-image" src="./assets/javascript/06/screenshot-6.png" alt="output-4" width="600px" />
+
+        <h2 class="section-title">Default Value in Prompt</h2>
+        <pre class="code-example">
+        <code class="code-snippet">
+        &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;title&gt;JavaScript&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;script&gt;
+              const motherTongue = <span style="color: red;">prompt("Enter your mother tongue", "marathi")</span>;
+              &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        
+      </code></pre>
+
+        <img class="output-image" src="./assets/javascript/06/screenshot-5.png" alt="output-4" width="600px" />
+
+        <h2 class="section-title">Using parseInt() and parseFloat()</h2>
+        <h3>Example of parseInt()</h3>
+        <pre><code>
+        const number1 = parseInt(prompt('Enter Number 1'));
+        const number2 = parseInt(prompt('Enter Number 2'));
+        const sum = number1 + number2;
+        <!-- document.write(`Sum of ${number1} and ${number2} is ${sum}`); -->
+      </code></pre>
+
+        <h3>Example of parseFloat()</h3>
+        <pre><code>
+        const base = parseFloat(prompt('Enter Base'));
+        const height = parseFloat(prompt('Enter Height'));
+        const areaOfTriangle = 0.5 * base * height;
+        <!-- document.write(`Area of Triangle: ${areaOfTriangle}`); -->
+      </code></pre>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="main-con" *ngIf="courseId === 2">
+    <div class="container">
+
+      <button (click)="toggleInfo('first')">
+        <h1>Introduction To React JS</h1>
+      </button>
+
+      <section *ngIf="showInfo.first">
+
+        <h1 class="title">Introduction To React JS</h1>
+        <p class="description">
+          React is a JavaScript frontend library for building user interfaces. It
+          is maintained by Facebook and a community of individual developers and
+          companies. You can use React to make single-page websites or mobile
+          apps, which can be pretty cool!
+        </p>
+
+        <h2 class="section-title">What React Does</h2>
+        <ul>
+          <li>
+            <strong>It's a JavaScript Library:</strong> React is not a framework;
+            it's a library. Think of it as a collection of useful code that you
+            can use to build your UI.
+          </li>
+          <li>
+            <strong>Developed by Facebook (Meta):</strong> Yep, smart folks at
+            Facebook created React and continue to improve it.
+          </li>
+          <li>
+            <strong>Component-Based Development:</strong> React is all about
+            building reusable building blocks called components. You make a
+            component once, and then you can use it in many different places on
+            your website or app.
+          </li>
+          <li>
+            <strong>Micro Frontend:</strong> React can be used to build small
+            parts of a website.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Awesome Features of React</h2>
+        <ol>
+          <li>Component based development</li>
+          <li>Fast</li>
+          <li>Virtual DOM</li>
+          <li>HMR (Hot Module Reloading)</li>
+          <li>JSX</li>
+        </ol>
+
+        <h3>Component based development</h3>
+        <p>
+          Component-based development in React means building applications using
+          reusable and standalone components, each representing a UI part with its
+          own logic and styling.
+        </p>
+
+        <h3>Fast</h3>
+        <p>
+          React is speedy. It helps your web pages load quickly and run smoothly.
+        </p>
+
+        <h3>Hot Module Reloading (HMR)</h3>
+        <p>
+          This is like magic for developers. It lets you see your code changes
+          right away without refreshing your whole page.
+        </p>
+
+        <h3>Real DOM vs Virtual DOM</h3>
+        <p>
+          The Virtual DOM is a lightweight, in-memory representation of the actual
+          DOM. Developers use frameworks like React to work with the Virtual DOM.
+        </p>
+
+        <h3>JSX</h3>
+        <p>
+          JSX stands for JavaScript XML. It's a syntax extension for JavaScript
+          used in React to describe the structure and layout of user interfaces.
+        </p>
+
+        <h2 class="section-title">Some Handy Terms</h2>
+        <ul>
+          <li>
+            <strong>npm (Node Package Manager):</strong> npm is like a super cool
+            store for JavaScript code.
+          </li>
+          <li>
+            <strong>npx (Node Package Executer):</strong> npx is like a magical
+            button that runs code packages from npm without installing them
+            permanently.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Create React App</h2>
+        <ol>
+          <li>
+            Create a folder and name it (whatever name you want to keep)
+            <code>First_Flight</code>.
+          </li>
+          <li>Open it in VS Code editor.</li>
+          <li>Create a file named <code>package.json</code>.</li>
+          <li>
+            In <code>package.json</code>, create an object with the project name:
+          </li>
+          <pre><code>
+          ｛
+              "name": "first_flight"
+           ｝
+        </code></pre>
+          <li>Write the version of the project:</li>
+          <pre><code>"version": "1.0.0"</code></pre>
+          <li>Write the dependencies:</li>
+          <pre><code>"dependencies":｛ ｝</code></pre>
+          <li>Run <code>npm i react</code> to install React.</li>
+          <li>Run <code>npm i react-dom</code> to install React DOM.</li>
+          <li>
+            Create a folder named <code>public</code> and create an
+            <code>index.html</code> file inside it.
+          </li>
+          <li>Write the basic HTML structure in <code>index.html</code>.</li>
+          <li>
+            Create a folder named <code>src</code> and create a file named
+            <code>main.js</code> inside it.
+          </li>
+          <li>Import ReactDOM in <code>main.js</code>:</li>
+          <pre><code>import ReactDOM from "react-dom/client";</code></pre>
+          <li>Create a root element.</li>
+          <li>Install react-scripts with <code>npm i react-scripts</code>.</li>
+          <li>Add a script in <code>package.json</code>:</li>
+          <pre><code>"scripts": ｛
+      "start": "react-scripts start"
+    ｝</code></pre>
+          <li>Run <code>npm start</code> to start the application.</li>
+        </ol>
+
+        <h2 class="section-title">Example package.json</h2>
+        <pre><code>｛
+      "name": "first_flight",
+      "version": "1.0.0",
+      "scripts": 
+      ｛
+        "start": "react-scripts start"
+      ｝,
+      "dependencies": 
+      ｛
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-scripts": "^5.0.1"
+      ｝,
+      "browserslist": 
+      ｛
+        "production": [
+          ">0.2%",
+          "not dead",
+          "not op_mini all"
+        ],
+        "development": [
+          "last 1 chrome version",
+          "last 1 firefox version",
+          "last 1 safari version"
+        ]
+      ｝
+    ｝</code></pre>
+
+      </section>
+    </div>
+
+
+
+    <div class="container">
+
+      <button (click)="toggleInfo('second')">
+        <h1>How to Create a React App</h1>
+      </button>
+
+      <section *ngIf="showInfo.second">
+        <h1 class="title">How to Create a React App</h1>
+        <p class="description">There are primarily two best ways to create a new React app:</p>
+        <ol>
+          <li>Using CRA (create-react-app).</li>
+          <li>Using Vite.</li>
+        </ol>
+        <p><strong>Both tools are popular and offer unique advantages for different project needs.</strong></p>
+
+        <h2 class="section-title">1. Using create-react-app</h2>
+        <p>It was created and is maintained by Facebook's React team.</p>
+        <p>It uses Webpack internally.</p>
+
+        <h3>Steps to Create a React App using CRA:</h3>
+        <ol>
+          <li>Ensure that you have installed <code>node.js</code> on your machine.</li>
+          <li>Open terminal or Git Bash, then type <code>npx create-react-app (name)</code> (e.g.,
+            <code>npx create-react-app foody</code>).</li>
+          <li>It will take some time to create the React app.</li>
+          <li>It will install some packages: <code>react</code>, <code>react-dom</code>, and <code>react-scripts</code>.
+          </li>
+          <li>Close the terminal and open that folder in VS Code.</li>
+          <li>Open the terminal in VS Code.</li>
+          <li>You will see all the necessary folders and files created.</li>
+          <li>It will redirect to your default browser.</li>
+          <li>Write this command: <code>npm start</code>. This command is used to start the development server.</li>
+          <li>Open <code>package.json</code> file; you will see it installed lots of extra libraries like
+            <code>@testing-library/jest-dom</code>, <code>@testing-library/react</code>,
+            <code>@testing-library/user-event</code>, etc.</li>
+          <li>Run <code>npm run build</code> to create a production-ready build of the application.</li>
+        </ol>
+
+        <h2 class="section-title">2. Using Vite</h2>
+        <p>Vite is an open-source project created by Evan You, the creator of Vue.js.</p>
+        <p>It's a modern build tool that aims to provide a faster and more efficient development experience for frontend
+          developers.</p>
+        <p>It has lightning-fast HMR (Hot Module Reloading) and comes with lots of features and plugins.</p>
+
+        <h3>Steps to Create a React App using Vite:</h3>
+        <ol>
+          <li>Open terminal and type <code>npm create vite@latest</code>.</li>
+          <li>Next, it will ask for a name to keep.</li>
+          <li>Next, it will ask to choose a framework; choose React (use arrow keys to navigate).</li>
+          <li>It will ask to choose a variant; choose your favorite variant.</li>
+          <li>Close the terminal and open that folder in VS Code.</li>
+          <li>Open the terminal in VS Code and type <code>npm i</code> to install all the necessary libraries and
+            dependencies.</li>
+        </ol>
+
+        <h3>Vite Folder Structure</h3>
+        <img src="./assets/react/02/02-vite-folder.png" alt="Vite Folder Structure" width="600px" />
+
+        <h3>Vite package.json File</h3>
+        <img src="./assets/react/02/03-vite-json.png" alt="Vite package.json" width="600px" />
+
+        <h3>Development Server</h3>
+        <p>The default behavior of <code>npm run dev</code> is to start the development server using Vite. You can
+          modify this behavior by editing the <code>package.json</code> file. In the scripts section, you'll find the
+          first script labeled <code>"dev": "vite"</code>. You can change it to <code>"start"</code> if you want to use
+          a different command for development.</p>
+        <p>To start your development server, run <code>npm run dev</code>. The server will start on a port different
+          from the CRA default (<code>http://localhost:5173/</code>). It won't automatically redirect you to the
+          browser, so you'll need to click on the link displayed in the terminal after running the command to navigate
+          there.</p>
+        <p>To create an optimized production build of your React application, run the build command:
+          <code>npm run build</code>. This command will generate a <code>dist</code> folder containing your
+          production-ready files.</p>
+        <p>After that, you are good to go for deployment.</p>
+
+      </section>
+    </div>
+
+
+
+
+
+    <div class="container">
+
+      <button (click)="toggleInfo('third')">
+        <h1>React Folder Structure</h1>
+      </button>
+
+      <section *ngIf="showInfo.third">
+        <h1 class="title">React Folder Structure</h1>
+        <p class="description">The folder structure of a React project looks like this:</p>
+
+        <pre><code>
+    >first-flight/
+      >node_modules/
+      >public/
+        index.html
+        favicon.ico
+      >src/
+        App.css
+        App.js
+        App.test.js
+        index.css
+        index.js
+        logo.svg
+      gitignore
+      package-lock.json
+      package.json
+      README.md
+      </code></pre>
+
+        <p>For the project to build, <strong>these files must exist with exact filenames</strong>:</p>
+        <ul>
+          <li><code>public/index.html</code> is the page template;</li>
+          <li><code>src/index.js</code> is the JavaScript entry point.</li>
+        </ul>
+
+        <h2 class="section-title">React Folder Structures</h2>
+
+        <h3>node_modules</h3>
+        <p>This folder contains all the dependencies of the project. It is not recommended to modify the contents of
+          this folder.</p>
+
+        <h3>public</h3>
+        <p>This folder contains the <code>index.html</code> file, which is the entry point of the application. It is not
+          recommended to modify the contents of this folder.</p>
+        <ul>
+          <li><code>robots.txt</code> file is used to tell search engines which pages or files the crawler can or can't
+            request from your site.</li>
+          <li><code>manifest.json</code> file is used to provide metadata associated with the web application.</li>
+          <li><code>logo192.png</code> and <code>logo512.png</code> files are used to provide the logo of the web
+            application.</li>
+          <li><code>favicon.ico</code> file is used to provide the favicon of the web application.</li>
+          <li><code>index.html</code> file is used to provide the entry point of the web application.</li>
+          <li><code>%PUBLIC_URL%</code> points to the public folder.</li>
+          <li><code>meta</code> tag is used to provide the metadata of the web application.</li>
+        </ul>
+        <p><strong>Note:</strong> The public folder is accessible everywhere in the application.</p>
+
+        <h3>src</h3>
+        <p>This is the source folder of the application. It contains all the files related to the application.</p>
+        <ul>
+          <li><code>index.js</code> file is used to provide the entry point of the application.</li>
+          <li><code>index.css</code> file is used to provide the styles of the entry point of the application.</li>
+          <li><code>App.js</code> file is used to provide the root component of the application.</li>
+          <li><code>App.css</code> file is used to provide the styles of the root component of the application.</li>
+          <li><code>App.test.js</code> file is used to provide the test cases of the root component of the application.
+          </li>
+        </ul>
+
+        <h3>.gitignore</h3>
+        <p>The <code>.gitignore</code> file is used to tell Git which files or folders to ignore in a project.</p>
+
+        <h3>package-lock.json</h3>
+        <p>The <code>package-lock.json</code> file contains the exact version of the dependencies of the project. It is
+          not recommended to modify the contents of this file.</p>
+
+        <h3>package.json</h3>
+        <p>The <code>package.json</code> file contains the dependencies of the project. It is not recommended to modify
+          the contents of this file.</p>
+
+      </section>
+    </div>
+
+
+
+    
+    <div class="container">
+
+      <button (click)="toggleInfo('four')">
+        <h1>Components and Props</h1>
+      </button>
+
+      <section *ngIf="showInfo.four">
+      <h1 class="title">Components and Props</h1>
+
+      <h2 class="section-title">What is Components?</h2>
+      <p>JavaScript functions that return <code>JSX</code>.</p>
+      <p>In React, a component is a reusable piece of code that defines the structure and behavior of a part of a user
+        interface. A component is typically written as a JavaScript function or class that returns a JSX element or a
+        tree of elements.</p>
+      <p>Components are mostly used in PascalCase.</p>
+
+      <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Card() ｛
+      const randomNumber = Math.random();
+      return (
+         &lt;div&gt;
+          &lt;h1&gt;Card ｛ randomNumber｝&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;Card /&gt;
+        &lt;Card /&gt;
+        &lt;Card /&gt;
+        &lt;Card /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+      <p><strong>Output:</strong></p>
+      <img src="/react/03/screenshot1.png" alt="screenshot1.png" width="600px" />
+
+      <h3>Example Explanation:</h3>
+      <ul>
+        <li>Line 1 imports the ReactDOM library from the <code>react-dom/client</code> module.</li>
+        <li>Line 2 creates a React <code>root</code> on the HTML element with the ID <code>root</code>.</li>
+        <li>Lines 4 to 11 define a React functional component called <code>Card</code>.</li>
+        <li>Lines 12 to 19 render multiple instances of the <code>Card</code> component.</li>
+      </ul>
+
+      <h2 class="section-title">What is Props?</h2>
+      <p><code>props</code> is a shorthand for <code>properties</code>. It refers to a mechanism for passing data from
+        one component to another in a unidirectional flow. Props are read-only, meaning that a component cannot modify
+        the props it receives from its parent.</p>
+
+      <h3>Example 1:</h3>
+      <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Greeting(props) ｛
+      return (
+         &lt;div&gt;
+          &lt;h1&gt;Hello Greeting&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+     &lt;&gt;
+        &lt;Greeting /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+      <p><strong>Output:</strong> Hello Greeting</p>
+
+      <h3>Example 2:</h3>
+      <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Greeting(props) ｛
+      console.log(props);
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;Hello&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;Greeting name="Anand" city="Pune" /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+      <p><strong>Output:</strong></p>
+      <img src="/react/03/screenshot2.png" alt="screenshot2.png" width="600px" />
+
+      <h3>Example 3:</h3>
+      <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Greeting(props) ｛
+      console.log(props);
+      return (
+        &lt;div&gt;
+            <p>I am ｛props.name｝ from ｛props.city｝.</p>
+        &lt;/&gt;
+      );
+    ｝
+    root.render(
+      &lt;
+        &lt;greeting name="Anand" city="Pune"/&gt;
+      /&gt;
+    );
+      </code></pre>
+
+      <p><strong>Output:</strong></p>
+      <img src="/react/03/screenshot3.png" alt="screenshot3.png" width="600px" />
+
+      <!-- <h3>Example 4:</h3>
+      <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.create
+
+
+    </code></pre> -->
+      </section>
+    </div>
+
+
+
+  </div>
+</div>

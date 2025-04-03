@@ -1,0 +1,68 @@
+.login-container {
+  max-width: 500px;
+  margin: 80px auto; /* Increased margin for better spacing */
+  padding: 30px; /* More padding for a balanced layout */
+  background: white;
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better depth */
+  text-align: center;
+}
+
+h2 {
+  color: #007bff;
+  margin-bottom: 25px; /* Extra spacing for better separation */
+  font-size: 2rem; /* Slightly bigger for a prominent heading */
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 25px; /* Increased spacing between form fields */
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px; /* More space between label and input */
+  font-size: 1.1rem;
+}
+
+input {
+  width: 95%;
+  padding: 16px; /* Increased padding for better comfort */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 10px 0 12px; /* Added more margin for spacing (top & bottom) */
+}
+
+button {
+  width: 100%;
+  padding: 14px; /* Slightly larger button */
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 15px; /* Extra space above button */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #0056b3; /* Darker shade for hover effect */
+  transform: scale(1.03); /* Subtle scaling effect */
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  font-weight: bold;
+}

@@ -1,0 +1,98 @@
+
+<!-- Navigation Bar -->
+<!-- <div class="navbar">
+  <div class="logo">Coaching Hub</div>
+  <ul class="nav-links">
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/dpp" routerLinkActive="active">DPP</a></li> 
+    <li><a routerLink="/login" routerLinkActive="active" class="btn">Login</a></li>
+  </ul>
+</div> -->
+
+
+<nav class="navbar">
+  <div>
+    <a routerLink="/" style="color: white; text-decoration: none; font-size: 34px;">Coaching Hub
+      <!-- <img src="https://greenorganicfarm0.netlify.app/assets/iconheader-B1Yk-ww7.png" height="40px" width="40px" alt=""> -->
+    </a>
+  </div>
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="navbar-nav" [class.show]="isMenuOpen">
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/dpp" routerLinkActive="active">DPP</a></li> 
+    <li><a routerLink="/login" routerLinkActive="active" class="btn">Login</a></li>
+  </ul>
+</nav>
+
+<!-- Main Content Area -->
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<!-- <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 Coaching Website. All Rights Reserved.</p>
+    <ul class="footer-links">
+      <li><a routerLink="/about">About Us</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/privacy">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer> -->
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Left: Address -->
+    <div class="footer-section address">
+      <h3>Contact Us</h3>
+      <p>123, ABC Street, XYZ City, India</p>
+      <p>Email: info@coachingwebsite.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+    <!-- Center: Quick Links -->
+    <div class="footer-section quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/courses">Courses</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/login">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Follow Us -->
+    <div class="footer-section follow-us">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Coaching Website. All Rights Reserved.</p>
+  </div>
+</footer>

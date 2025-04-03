@@ -1,0 +1,151 @@
+/* Background Container */
+.billing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  /* background: linear-gradient(to right, #6a11cb, #2575fc); Attractive Gradient Background */
+}
+
+/* Card Container */
+.billing-container {
+  width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading */
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-align: left;
+  color: #444;
+}
+
+strong {
+  color: #222;
+}
+
+/* Email Input Container */
+.email-container {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.email-container label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.email-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.email-container input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 91, 187, 0.4);
+}
+
+/* Proceed to Payment Button */
+.start-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.start-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 91, 187, 0.4);
+}
+
+/* Invoice Section */
+.invoice {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.invoice h3 {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Invoice Details */
+.invoice p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

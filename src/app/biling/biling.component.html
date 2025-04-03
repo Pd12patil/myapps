@@ -1,0 +1,58 @@
+<!-- <div class="billing-page">
+  <div class="billing-container" *ngIf="selectedCourse; else noCourse">
+    <h2>Billing Details</h2>
+
+    <p><strong>Course:</strong> {{ selectedCourse?.title || 'Course Name Not Available' }}</p>
+    <p><strong>Price:</strong> ₹{{ selectedCourse?.price }}</p>
+    <p><strong>Quantity:</strong> {{ quantity }}</p>
+    <p><strong>Total:</strong> ₹{{ totalPrice }}</p>
+
+    <button class="proceed-btn" (click)="proceedToPayment()">Proceed to Payment</button>
+
+     Invoice Section -->
+    <!-- <div *ngIf="showInvoice" class="invoice"> -
+      <h3>Invoice</h3>
+      <p><strong>Course:</strong> {{ selectedCourse?.title }}</p>
+      <p><strong>Quantity:</strong> {{ quantity }}</p>
+      <p><strong>Total Amount:</strong> ₹{{ totalPrice }}</p>
+    </div>
+  </div>
+</div>->
+
+ Fallback Message -->
+<!-- <ng-template #noCourse>
+  <p class="error-message">Error: No course data found.</p>
+</ng-template> --> 
+<div class="billing-page">
+  <div class="billing-container" *ngIf="selectedCourse; else noCourse">
+    <h2>Billing Details</h2>
+
+    <p><strong>Course:</strong> {{ selectedCourse?.title || 'Course Name Not Available' }}</p>
+    <p><strong>Price:</strong> ₹{{ selectedCourse?.price }}</p>
+    <p><strong>Quantity:</strong> {{ quantity }}</p>
+    <p><strong>Total:</strong> ₹{{ totalPrice }}</p>
+
+    <!-- Email Input Field for Billing -->
+    <div class="email-container">
+      <label for="email">Enter Your Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" placeholder="Enter your email" required>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </div>
+
+    <!-- Proceed to Payment Button -->
+    <button (click)="proceedToPayment()" class="start-btn">Proceed to Payment</button>
+
+    <!-- Invoice Section -->
+    <div *ngIf="showInvoice" class="invoice">
+      <h3>Invoice</h3>
+      <p><strong>Course:</strong> {{ selectedCourse?.title }}</p>
+      <p><strong>Quantity:</strong> {{ quantity }}</p>
+      <p><strong>Total Amount:</strong> ₹{{ totalPrice }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Fallback Message -->
+<ng-template #noCourse>
+  <p class="error-message">Error: No course data found.</p>
+</ng-template>
