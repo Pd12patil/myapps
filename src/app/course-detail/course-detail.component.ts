@@ -22,11 +22,16 @@ export class CourseDetailComponent implements OnInit {
     third: false,
     four: false,
     five: false,
-    six: false
+    six: false,
+    seven: false,
+    eight: false,
+    nine: false,
+    ten: false,
+    eleven: false
 
   };
 
-  toggleInfo(section: 'first' | 'second' |'third' | 'four' | 'five' |'six'): void {  // Restrict to 'first' or 'second' only
+  toggleInfo(section: 'first' | 'second' |'third' | 'four' | 'five' |'six' | 'seven' | 'eight' | 'nine' | 'ten' | 'eleven'): void {  // Restrict to 'first' or 'second' only
     this.showInfo[section] = !this.showInfo[section];
   }
 

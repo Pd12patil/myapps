@@ -287,3 +287,51 @@ body {
   background: linear-gradient(to right, #6a11cb, #2575fc);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
+
+
+
+.qcolor {
+  color: #6a11cb;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .quiz-container, .quiz-box, .result-box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .quiz-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .quiz-card h3 {
+    font-size: 20px;
+  }
+
+  .validation-form {
+    width: 90%;
+  }
+
+  .result-box {
+    width: 90%;
+    padding: 20px;
+  }
+  .result-box h2 {
+    font-size: 24px;
+  }
+  .result-score {
+    font-size: 28px;
+  }
+  .option-btn {
+    font-size: 14px;
+  }
+  .start-btn, .next-btn, .validation-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  
+}

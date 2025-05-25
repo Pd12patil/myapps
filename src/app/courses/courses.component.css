@@ -7,7 +7,10 @@
   }
   
   .course-card {
-    width: 500px;
+    /* width: 500px; */
+    width: 350px;
+    margin: 10px;
+    /* height: 450px; */
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -86,3 +89,48 @@
     background-color: #27ae60;
   }
   
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .courses-container {
+        display: flex;
+       flex-wrap: wrap;
+    }
+    
+    .course-card {
+        /* width: 90%;
+        margin: 10px 0; */
+        width: 400px;
+        margin: 10px auto;
+        height: auto;
+        /* padding: 15px; */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+        /* text-align: left; */
+        border-radius: 8px; 
+    }
+    
+    .course-image {
+      margin-top: 10px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .course-title {
+        font-size: 22px;
+    }
+    
+    .course-description {
+        font-size: 16px;
+    }
+    
+    .course-price {
+        font-size: 16px;
+    }
+    
+    .enroll-btn,
+    .explore-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

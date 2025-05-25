@@ -172,7 +172,7 @@ button {
   
   button:hover {
     background-color: #005f6b;
-  }
+  } 
   
 .container {
     font-family: Arial, sans-serif;
@@ -245,8 +245,9 @@ button {
   /* General Container Styles */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    /* margin: 0 auto; */
+    margin: 0 20%;
+    /* padding: 20px; */
     font-family: Arial, sans-serif;
   }
   
@@ -367,7 +368,8 @@ button {
   /* Responsive Styles */
   @media (max-width: 768px) {
     .container {
-      padding: 15px;
+      /* padding: 15px; */
+      margin: 0 auto;
     }
   
     .title {
@@ -504,3 +506,11 @@ button {
   {
     font-size: 20px;
   }
+
+
+  .main-con {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}

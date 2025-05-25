@@ -3,20 +3,12 @@
   <div class="quiz-grid">
     <div class="quiz-card" *ngFor="let quiz of quizzes">
       <h3>{{ quiz.title }}</h3>
-      <button class="start-btn" (click)="openValidationForm()">{{ quiz.buttonText }}</button>
+      <button class="start-btn" (click)="openValidationForm(quiz.title)">{{ quiz.buttonText }}</button>
     </div>
   </div>
 </div>
 
-<!-- Existing Single Quiz Card (No Changes) -->
-<div class="quiz-container" *ngIf="!quizStarted && !quizCompleted && !showValidationForm">
-  <div class="quiz-card">
-    <h3>Frontend Quiz</h3>
-    <button class="start-btn" (click)="openValidationForm()">Start</button>
-  </div>
-</div>
-
-<!-- Validation Form (No Changes) -->
+<!-- Validation Form -->
 <div class="validation-container" *ngIf="showValidationForm">
   <div class="validation-form">
     <h2>Validation form</h2>
@@ -27,15 +19,16 @@
   </div>
 </div>
 
-<!-- Quiz Section (No Changes) -->
+<!-- Quiz Section -->
 <div class="quiz-box" *ngIf="quizStarted">
-  <h2>Question {{ currentQuestionIndex + 1 }} / 5</h2>
-  <p>{{ questions[currentQuestionIndex].question }}</p>
+  <h2>Question {{ currentQuestionIndex + 1 }} / {{ questions.length }}</h2>
+  <p class="qcolor">{{ questions[currentQuestionIndex].question }}</p>
 
   <div *ngFor="let option of questions[currentQuestionIndex].options">
     <button class="option-btn" 
             [class.selected]="option === selectedOption" 
             (click)="selectOption(option)">
+      <i class="fa fa-check" *ngIf="option === selectedOption"></i>
       {{ option }}
     </button>
   </div>
@@ -43,9 +36,9 @@
   <button class="next-btn" (click)="nextQuestion()">Next</button>
 </div>
 
-<!-- Quiz Result (No Changes) -->
+<!-- Quiz Result -->
 <div class="result-box" *ngIf="quizCompleted">
-  <h2>Your Score: {{ score }} / 10</h2>
+  <h2>Your Score: {{ score }} / {{ questions.length * 2 }}</h2>
   <h3>Correct Answers:</h3>
   <ul>
     <li *ngFor="let q of questions">
