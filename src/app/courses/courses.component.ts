@@ -19,14 +19,14 @@ export class CoursesComponent {
       id: 2,
       title: 'React Essentials',
       description: 'Master the fundamentals of React.',
-      price: 5999,
+      price: 4999,
       image:'./assets/React.png',
     },
     {
       id: 3,
       title: 'Java for Beginner',
       description: 'Learn the core concepts of Java,',
-      price: 5999,
+      price: 2999,
       image: './assets/java.png'
     },
     {
@@ -40,7 +40,7 @@ export class CoursesComponent {
      id: 5,
       title: 'Javascript Tutorials',
       description: 'Learn the core concepts of Java,',
-      price: 5999,
+      price: 2999,
       image: './assets/javascript.png'    
     },
     {

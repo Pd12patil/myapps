@@ -156,7 +156,6 @@
 
       <!-- Conditional sections that show based on the `showInfo` flag -->
       <section *ngIf="showInfo.third" class="course-description">
-         
         <h2>src/ Directory:</h2>
         <p>
           This is the source directory containing all your application code.
@@ -258,6 +257,1754 @@
     </div>
   </div>
 
+  <div class="main-con" *ngIf="courseId === 2">
+    <div class="container">
+      <button (click)="toggleInfo('first')">
+        <h1>Introduction To React JS</h1>
+      </button>
+
+      <section *ngIf="showInfo.first">
+        <h1 class="title">Introduction To React JS</h1>
+        <p class="description">
+          React is a JavaScript frontend library for building user interfaces.
+          It is maintained by Facebook and a community of individual developers
+          and companies. You can use React to make single-page websites or
+          mobile apps, which can be pretty cool!
+        </p>
+
+        <h2 class="section-title">What React Does</h2>
+        <ul>
+          <li>
+            <strong>It's a JavaScript Library:</strong> React is not a
+            framework; it's a library. Think of it as a collection of useful
+            code that you can use to build your UI.
+          </li>
+          <li>
+            <strong>Developed by Facebook (Meta):</strong> Yep, smart folks at
+            Facebook created React and continue to improve it.
+          </li>
+          <li>
+            <strong>Component-Based Development:</strong> React is all about
+            building reusable building blocks called components. You make a
+            component once, and then you can use it in many different places on
+            your website or app.
+          </li>
+          <li>
+            <strong>Micro Frontend:</strong> React can be used to build small
+            parts of a website.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Awesome Features of React</h2>
+        <ol>
+          <li>Component based development</li>
+          <li>Fast</li>
+          <li>Virtual DOM</li>
+          <li>HMR (Hot Module Reloading)</li>
+          <li>JSX</li>
+        </ol>
+
+        <h3>Component based development</h3>
+        <p>
+          Component-based development in React means building applications using
+          reusable and standalone components, each representing a UI part with
+          its own logic and styling.
+        </p>
+
+        <h3>Fast</h3>
+        <p>
+          React is speedy. It helps your web pages load quickly and run
+          smoothly.
+        </p>
+
+        <h3>Hot Module Reloading (HMR)</h3>
+        <p>
+          This is like magic for developers. It lets you see your code changes
+          right away without refreshing your whole page.
+        </p>
+
+        <h3>Real DOM vs Virtual DOM</h3>
+        <p>
+          The Virtual DOM is a lightweight, in-memory representation of the
+          actual DOM. Developers use frameworks like React to work with the
+          Virtual DOM.
+        </p>
+
+        <h3>JSX</h3>
+        <p>
+          JSX stands for JavaScript XML. It's a syntax extension for JavaScript
+          used in React to describe the structure and layout of user interfaces.
+        </p>
+
+        <h2 class="section-title">Some Handy Terms</h2>
+        <ul>
+          <li>
+            <strong>npm (Node Package Manager):</strong> npm is like a super
+            cool store for JavaScript code.
+          </li>
+          <li>
+            <strong>npx (Node Package Executer):</strong> npx is like a magical
+            button that runs code packages from npm without installing them
+            permanently.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Create React App</h2>
+        <ol>
+          <li>
+            Create a folder and name it (whatever name you want to keep)
+            <code>First_Flight</code>.
+          </li>
+          <li>Open it in VS Code editor.</li>
+          <li>Create a file named <code>package.json</code>.</li>
+          <li>
+            In <code>package.json</code>, create an object with the project
+            name:
+          </li>
+          <pre><code>
+          ｛
+              "name": "first_flight"
+           ｝
+        </code></pre>
+          <li>Write the version of the project:</li>
+          <pre><code>"version": "1.0.0"</code></pre>
+          <li>Write the dependencies:</li>
+          <pre><code>"dependencies":｛ ｝</code></pre>
+          <li>Run <code>npm i react</code> to install React.</li>
+          <li>Run <code>npm i react-dom</code> to install React DOM.</li>
+          <li>
+            Create a folder named <code>public</code> and create an
+            <code>index.html</code> file inside it.
+          </li>
+          <li>Write the basic HTML structure in <code>index.html</code>.</li>
+          <li>
+            Create a folder named <code>src</code> and create a file named
+            <code>main.js</code> inside it.
+          </li>
+          <li>Import ReactDOM in <code>main.js</code>:</li>
+          <pre><code>import ReactDOM from "react-dom/client";</code></pre>
+          <li>Create a root element.</li>
+          <li>Install react-scripts with <code>npm i react-scripts</code>.</li>
+          <li>Add a script in <code>package.json</code>:</li>
+          <pre><code>"scripts": ｛
+      "start": "react-scripts start"
+    ｝</code></pre>
+          <li>Run <code>npm start</code> to start the application.</li>
+        </ol>
+
+        <h2 class="section-title">Example package.json</h2>
+        <pre><code>｛
+      "name": "first_flight",
+      "version": "1.0.0",
+      "scripts": 
+      ｛
+        "start": "react-scripts start"
+      ｝,
+      "dependencies": 
+      ｛
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-scripts": "^5.0.1"
+      ｝,
+      "browserslist": 
+      ｛
+        "production": [
+          ">0.2%",
+          "not dead",
+          "not op_mini all"
+        ],
+        "development": [
+          "last 1 chrome version",
+          "last 1 firefox version",
+          "last 1 safari version"
+        ]
+      ｝
+    ｝</code></pre>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('second')">
+        <h1>How to Create a React App</h1>
+      </button>
+
+      <section *ngIf="showInfo.second">
+        <h1 class="title">How to Create a React App</h1>
+        <p class="description">
+          There are primarily two best ways to create a new React app:
+        </p>
+        <ol>
+          <li>Using CRA (create-react-app).</li>
+          <li>Using Vite.</li>
+        </ol>
+        <p>
+          <strong
+            >Both tools are popular and offer unique advantages for different
+            project needs.</strong
+          >
+        </p>
+
+        <h2 class="section-title">1. Using create-react-app</h2>
+        <p>It was created and is maintained by Facebook's React team.</p>
+        <p>It uses Webpack internally.</p>
+
+        <h3>Steps to Create a React App using CRA:</h3>
+        <ol>
+          <li>
+            Ensure that you have installed <code>node.js</code> on your machine.
+          </li>
+          <li>
+            Open terminal or Git Bash, then type
+            <code>npx create-react-app (name)</code> (e.g.,
+            <code>npx create-react-app foody</code>).
+          </li>
+          <li>It will take some time to create the React app.</li>
+          <li>
+            It will install some packages: <code>react</code>,
+            <code>react-dom</code>, and <code>react-scripts</code>.
+          </li>
+          <li>Close the terminal and open that folder in VS Code.</li>
+          <li>Open the terminal in VS Code.</li>
+          <li>You will see all the necessary folders and files created.</li>
+          <li>It will redirect to your default browser.</li>
+          <li>
+            Write this command: <code>npm start</code>. This command is used to
+            start the development server.
+          </li>
+          <li>
+            Open <code>package.json</code> file; you will see it installed lots
+            of extra libraries like <code>@testing-library/jest-dom</code>,
+            <code>@testing-library/react</code>,
+            <code>@testing-library/user-event</code>, etc.
+          </li>
+          <li>
+            Run <code>npm run build</code> to create a production-ready build of
+            the application.
+          </li>
+        </ol>
+
+        <h2 class="section-title">2. Using Vite</h2>
+        <p>
+          Vite is an open-source project created by Evan You, the creator of
+          Vue.js.
+        </p>
+        <p>
+          It's a modern build tool that aims to provide a faster and more
+          efficient development experience for frontend developers.
+        </p>
+        <p>
+          It has lightning-fast HMR (Hot Module Reloading) and comes with lots
+          of features and plugins.
+        </p>
+
+        <h3>Steps to Create a React App using Vite:</h3>
+        <ol>
+          <li>Open terminal and type <code>npm create vite@latest</code>.</li>
+          <li>Next, it will ask for a name to keep.</li>
+          <li>
+            Next, it will ask to choose a framework; choose React (use arrow
+            keys to navigate).
+          </li>
+          <li>
+            It will ask to choose a variant; choose your favorite variant.
+          </li>
+          <li>Close the terminal and open that folder in VS Code.</li>
+          <li>
+            Open the terminal in VS Code and type <code>npm i</code> to install
+            all the necessary libraries and dependencies.
+          </li>
+        </ol>
+
+        <h3>Vite Folder Structure</h3>
+        <img
+          src="./assets/react/02/02-vite-folder.png"
+          alt="Vite Folder Structure"
+          width="600px"
+        />
+
+        <h3>Vite package.json File</h3>
+        <img
+          src="./assets/react/02/03-vite-json.png"
+          alt="Vite package.json"
+          width="600px"
+        />
+
+        <h3>Development Server</h3>
+        <p>
+          The default behavior of <code>npm run dev</code> is to start the
+          development server using Vite. You can modify this behavior by editing
+          the <code>package.json</code> file. In the scripts section, you'll
+          find the first script labeled <code>"dev": "vite"</code>. You can
+          change it to <code>"start"</code> if you want to use a different
+          command for development.
+        </p>
+        <p>
+          To start your development server, run <code>npm run dev</code>. The
+          server will start on a port different from the CRA default
+          (<code>http://localhost:5173/</code>). It won't automatically redirect
+          you to the browser, so you'll need to click on the link displayed in
+          the terminal after running the command to navigate there.
+        </p>
+        <p>
+          To create an optimized production build of your React application, run
+          the build command: <code>npm run build</code>. This command will
+          generate a <code>dist</code> folder containing your production-ready
+          files.
+        </p>
+        <p>After that, you are good to go for deployment.</p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('third')">
+        <h1>React Folder Structure</h1>
+      </button>
+
+      <section *ngIf="showInfo.third">
+        <h1 class="title">React Folder Structure</h1>
+        <p class="description">
+          The folder structure of a React project looks like this:
+        </p>
+
+        <pre><code>
+    >first-flight/
+      >node_modules/
+      >public/
+        index.html
+        favicon.ico
+      >src/
+        App.css
+        App.js
+        App.test.js
+        index.css
+        index.js
+        logo.svg
+      gitignore
+      package-lock.json
+      package.json
+      README.md
+      </code></pre>
+
+        <p>
+          For the project to build,
+          <strong>these files must exist with exact filenames</strong>:
+        </p>
+        <ul>
+          <li><code>public/index.html</code> is the page template;</li>
+          <li><code>src/index.js</code> is the JavaScript entry point.</li>
+        </ul>
+
+        <h2 class="section-title">React Folder Structures</h2>
+
+        <h3>node_modules</h3>
+        <p>
+          This folder contains all the dependencies of the project. It is not
+          recommended to modify the contents of this folder.
+        </p>
+
+        <h3>public</h3>
+        <p>
+          This folder contains the <code>index.html</code> file, which is the
+          entry point of the application. It is not recommended to modify the
+          contents of this folder.
+        </p>
+        <ul>
+          <li>
+            <code>robots.txt</code> file is used to tell search engines which
+            pages or files the crawler can or can't request from your site.
+          </li>
+          <li>
+            <code>manifest.json</code> file is used to provide metadata
+            associated with the web application.
+          </li>
+          <li>
+            <code>logo192.png</code> and <code>logo512.png</code> files are used
+            to provide the logo of the web application.
+          </li>
+          <li>
+            <code>favicon.ico</code> file is used to provide the favicon of the
+            web application.
+          </li>
+          <li>
+            <code>index.html</code> file is used to provide the entry point of
+            the web application.
+          </li>
+          <li><code>%PUBLIC_URL%</code> points to the public folder.</li>
+          <li>
+            <code>meta</code> tag is used to provide the metadata of the web
+            application.
+          </li>
+        </ul>
+        <p>
+          <strong>Note:</strong> The public folder is accessible everywhere in
+          the application.
+        </p>
+
+        <h3>src</h3>
+        <p>
+          This is the source folder of the application. It contains all the
+          files related to the application.
+        </p>
+        <ul>
+          <li>
+            <code>index.js</code> file is used to provide the entry point of the
+            application.
+          </li>
+          <li>
+            <code>index.css</code> file is used to provide the styles of the
+            entry point of the application.
+          </li>
+          <li>
+            <code>App.js</code> file is used to provide the root component of
+            the application.
+          </li>
+          <li>
+            <code>App.css</code> file is used to provide the styles of the root
+            component of the application.
+          </li>
+          <li>
+            <code>App.test.js</code> file is used to provide the test cases of
+            the root component of the application.
+          </li>
+        </ul>
+
+        <h3>.gitignore</h3>
+        <p>
+          The <code>.gitignore</code> file is used to tell Git which files or
+          folders to ignore in a project.
+        </p>
+
+        <h3>package-lock.json</h3>
+        <p>
+          The <code>package-lock.json</code> file contains the exact version of
+          the dependencies of the project. It is not recommended to modify the
+          contents of this file.
+        </p>
+
+        <h3>package.json</h3>
+        <p>
+          The <code>package.json</code> file contains the dependencies of the
+          project. It is not recommended to modify the contents of this file.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('four')">
+        <h1>Components and Props</h1>
+      </button>
+
+      <section *ngIf="showInfo.four">
+        <h1 class="title">Components and Props</h1>
+
+        <h2 class="section-title">What is Components?</h2>
+        <p>JavaScript functions that return <code>JSX</code>.</p>
+        <p>
+          In React, a component is a reusable piece of code that defines the
+          structure and behavior of a part of a user interface. A component is
+          typically written as a JavaScript function or class that returns a JSX
+          element or a tree of elements.
+        </p>
+        <p>Components are mostly used in PascalCase.</p>
+
+        <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Card() ｛
+      const randomNumber = Math.random();
+      return (
+         &lt;div&gt;
+          &lt;h1&gt;Card ｛ randomNumber｝&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;Card /&gt;
+        &lt;Card /&gt;
+        &lt;Card /&gt;
+        &lt;Card /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <img
+          src="/react/03/screenshot1.png"
+          alt="screenshot1.png"
+          width="600px"
+        />
+
+        <h3>Example Explanation:</h3>
+        <ul>
+          <li>
+            Line 1 imports the ReactDOM library from the
+            <code>react-dom/client</code> module.
+          </li>
+          <li>
+            Line 2 creates a React <code>root</code> on the HTML element with
+            the ID <code>root</code>.
+          </li>
+          <li>
+            Lines 4 to 11 define a React functional component called
+            <code>Card</code>.
+          </li>
+          <li>
+            Lines 12 to 19 render multiple instances of the
+            <code>Card</code> component.
+          </li>
+        </ul>
+
+        <h2 class="section-title">What is Props?</h2>
+        <p>
+          <code>props</code> is a shorthand for <code>properties</code>. It
+          refers to a mechanism for passing data from one component to another
+          in a unidirectional flow. Props are read-only, meaning that a
+          component cannot modify the props it receives from its parent.
+        </p>
+
+        <h3>Example 1:</h3>
+        <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Greeting(props) ｛
+      return (
+         &lt;div&gt;
+          &lt;h1&gt;Hello Greeting&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+     &lt;&gt;
+        &lt;Greeting /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+        <p><strong>Output:</strong> Hello Greeting</p>
+
+        <h3>Example 2:</h3>
+        <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Greeting(props) ｛
+      console.log(props);
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;Hello&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;Greeting name="Anand" city="Pune" /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <img
+          src="/react/03/screenshot2.png"
+          alt="screenshot2.png"
+          width="600px"
+        />
+
+        <h3>Example 3:</h3>
+        <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    
+    function Greeting(props) ｛
+      console.log(props);
+      return (
+        &lt;div&gt;
+            <p>I am ｛props.name｝ from ｛props.city｝.</p>
+        &lt;/&gt;
+      );
+    ｝
+    root.render(
+      &lt;
+        &lt;greeting name="Anand" city="Pune"/&gt;
+      /&gt;
+    );
+      </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <img
+          src="/react/03/screenshot3.png"
+          alt="screenshot3.png"
+          width="600px"
+        />
+
+        <!-- <h3>Example 4:</h3>
+      <pre><code>
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.create
+
+
+    </code></pre> -->
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('five')">
+        <h1>State in React</h1>
+      </button>
+
+      <section *ngIf="showInfo.five">
+        <h1 class="title">State in React</h1>
+        <p class="description">
+          State is a built-in object that allows components to manage and store
+          data that can change over time.
+        </p>
+
+        <h2 class="section-title">What is State?</h2>
+        <p>
+          State is a JavaScript object that holds data that can change over
+          time. It is used to manage the dynamic behavior of a component.
+        </p>
+
+        <h2 class="section-title">How to Use State?</h2>
+        <p>
+          To use state in a functional component, you need to import the
+          <code>useState</code> hook from the React library.
+        </p>
+
+        <pre><code>
+    import React, ｛ useState ｝  from 'react';
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    function Counter() ｛
+      const [count, setCount] = useState(0);
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;Counter: ｛count｝&lt;/h1&gt;
+          &lt;button onClick=｛() => setCount(count + 1)｝&gt;Increment&lt;/button&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;Counter /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <img
+          src="/react/04/screenshot1.png"
+          alt="screenshot1.png"
+          width="600px"
+        />
+
+        <h2 class="section-title">Explanation of the Code</h2>
+        <ul>
+          <li>
+            Line 1 imports the <code>useState</code> hook from the React
+            library.
+          </li>
+          <li>
+            Line 2 imports the ReactDOM library from the
+            <code>react-dom/client</code> module.
+          </li>
+          <li>
+            Line 3 creates a React root on the HTML element with the ID
+            <code>root</code>.
+          </li>
+          <li>
+            Lines 5 to 12 define a React functional component called
+            <code>Counter</code>.
+          </li>
+          <li>
+            Line 6 initializes the state variable <code>count</code> with an
+            initial value of 0 using the <code>useState</code> hook.
+          </li>
+          <li>
+            Line 7 returns a JSX element that displays the current count and a
+            button to increment it.
+          </li>
+          <li>
+            Line 13 renders the <code>Counter</code> component inside a React
+            fragment.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('six')">
+        <h1>React Lifecycle Methods</h1>
+      </button>
+
+      <section *ngIf="showInfo.six">
+        <h1 class="title">React Lifecycle Methods</h1>
+        <p class="description">
+          Lifecycle methods are special methods in React components that allow
+          you to run code at specific points in a component's lifecycle.
+        </p>
+
+        <h2 class="section-title">Common Lifecycle Methods</h2>
+        <ul>
+          <li>
+            <code>componentDidMount()</code>: Called after the component is
+            mounted.
+          </li>
+          <li>
+            <code>componentDidUpdate()</code>: Called after the component is
+            updated.
+          </li>
+          <li>
+            <code>componentWillUnmount()</code>: Called before the component is
+            unmounted.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Example of Lifecycle Methods</h2>
+        <pre><code>
+    import React, ｛ useEffect ｝ from 'react';
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    function LifecycleExample() ｛
+      useEffect(() => ｛
+        console.log('Component mounted');
+        return () => ｛
+          console.log('Component unmounted');
+        ｝;
+      ｝, []);
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;Lifecycle Example&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;LifecycleExample /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+        <p>
+          <strong>Output:</strong> When the component mounts, it will log
+          "Component mounted" to the console. When the component unmounts, it
+          will log "Component unmounted" to the console.
+        </p>
+
+        <h2 class="section-title">Explanation of the Code</h2>
+        <ul>
+          <li>
+            Line 1 imports the <code>useEffect</code> hook from the React
+            library.
+          </li>
+          <li>
+            Line 2 imports the ReactDOM library from the
+            <code>react-dom/client</code> module.
+          </li>
+          <li>
+            Line 3 creates a React root on the HTML element with the ID
+            <code>root</code>.
+          </li>
+          <li>
+            Lines 5 to 14 define a React functional component called
+            <code>LifecycleExample</code>.
+          </li>
+          <li>
+            Line 6 uses the <code>useEffect</code> hook to run code when the
+            component mounts and unmounts.
+          </li>
+          <li>
+            Line 7 logs "Component mounted" to the console when the component
+            mounts.
+          </li>
+          <li>
+            Line 8 returns a cleanup function that logs "Component unmounted" to
+            the console when the component unmounts.
+          </li>
+          <li>
+            Line 9 returns a JSX element that displays "Lifecycle Example".
+          </li>
+          <li>
+            Line 15 renders the <code>LifecycleExample</code> component inside a
+            React fragment.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('seven')">
+        <h1>React Hooks</h1>
+      </button>
+
+      <section *ngIf="showInfo.seven">
+        <h1 class="title">React Hooks</h1>
+        <p class="description">
+          Hooks are special functions in React that allow you to use state and
+          other React features in functional components.
+        </p>
+
+        <h2 class="section-title">Commonly Used Hooks</h2>
+        <ul>
+          <li>
+            <code>useState()</code>: Allows you to add state to a functional
+            component.
+          </li>
+          <li>
+            <code>useEffect()</code>: Allows you to perform side effects in a
+            functional component.
+          </li>
+          <li>
+            <code>useContext()</code>: Allows you to access context in a
+            functional component.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Example of useState Hook</h2>
+        <pre><code>
+    import React, ｛ useState ｝ from 'react';
+    import ReactDOM from 'react-dom/client';
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    function Counter() ｛
+      const [count, setCount] = useState(0);
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;Counter: ｛count｝&lt;/h1&gt;
+          &lt;button onClick=｛() => setCount(count + 1)｝&gt;Increment&lt;/button&gt;
+        &lt;/div&gt;
+      );
+      ｝
+    root.render(
+      &lt;&gt;
+        &lt;Counter /&gt;
+      &lt;/&gt;
+    );
+      </code></pre>
+
+        <p><strong>Output:</strong></p>
+        <img
+          src="/react/05/screenshot1.png"
+          alt="screenshot1.png"
+          width="600px"
+        />
+
+        <h2 class="section-title">Explanation of the Code</h2>
+        <ul>
+          <li>
+            Line 1 imports the <code>useState</code> hook from the React
+            library.
+          </li>
+          <li>
+            Line 2 imports the ReactDOM library from the
+            <code>react-dom/client</code> module.
+          </li>
+          <li>
+            Line 3 creates a React root on the HTML element with the ID
+            <code>root</code>.
+          </li>
+          <li>
+            Lines 5 to 12 define a React functional component called
+            <code>Counter</code>.
+          </li>
+          <li>
+            Line 6 initializes the state variable <code>count</code> with an
+            initial value of 0 using the <code>useState</code> hook.
+          </li>
+          <li>
+            Line 7 returns a JSX element that displays the current count and a
+            button to increment it.
+          </li>
+          <li>
+            Line 13 renders the <code>Counter</code> component inside a React
+            fragment.
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="main-con" *ngIf="courseId === 3">
+    <!-- <div class="container">
+
+      <button (click)="toggleInfo('first')">
+        <h1>Java</h1>
+      </button>
+      <section *ngIf="showInfo.first">
+        <h1 class="title">Java</h1>
+        <p class="description">
+          Java is a high-level, class-based, object-oriented programming language that is designed to have as few
+          implementation dependencies as possible. It is a general-purpose programming language that is concurrent,
+          class-based, and object-oriented.
+        </p>
+
+        <h2 class="section-title">Key Features of Java</h2>
+        <ul>
+          <li>Platform Independence</li>
+          <li>Object-Oriented</li>
+          <li>Robust and Secure</li>
+          <li>Automatic Memory Management</li>
+          <li>Rich Standard Library</li>
+        </ul>
+
+        <h2 class="section-title">Example Code</h2>
+        <pre><code>
+        public class HelloWorld ｛
+          public static void main(String[] args) ｛
+            System.out.println("Hello, World!");
+          ｝
+        ｝
+      </code></pre>
+        <p>
+          This simple Java program prints "Hello, World!" to the console. It demonstrates the basic structure of a
+          Java program, including the class definition and the main method.
+        </p>
+
+        <h2 class="section-title">Getting Started with Java</h2>
+        <ol>
+          <li>Install the Java Development Kit (JDK).</li>
+          <li>Set up your development environment (IDE) like IntelliJ IDEA or Eclipse.</li>
+          <li>Create a new Java project.</li>
+          <li>Write your first Java program.</li>
+          <li>Compile and run your program.</li>
+        </ol>
+        <p>
+          To run a Java program, you need to compile it first using the <code>javac</code> command, and then run it
+          using the <code>java</code> command.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('second')">
+        <h1>Java Array Object</h1>
+      </button>
+      <section *ngIf="showInfo.second">
+        <h1 class="title">Java Array Object</h1>
+        <p class="description">
+          In Java, an array is a data structure that allows you to store multiple values of the same type in a single
+          variable. It is a fixed-size collection of elements, and each element can be accessed using its index.
+        </p>
+
+        <h2 class="section-title">Creating an Array</h2>
+        <pre><code>int[] numbers = new int[5];</code></pre>
+        <p>
+          This creates an array of integers with a size of 5. You can also initialize an array with values:
+        </p>
+        <pre><code>int[] numbers = ｛1, 2, 3, 4, 5｝;</code></pre>
+
+        <h2 class="section-title">Accessing Array Elements</h2>
+        <p>You can access array elements using their index:</p>
+        <pre><code>int firstNumber = numbers[0]; // Accessing the first element</code></pre>
+
+        <h2 class="section-title">Iterating Over an Array</h2>
+        <p>You can use a loop to iterate over the elements of an array:</p>
+        <pre><code>
+        for (int i = 0; i &lt; numbers.length; i++) ｛
+          System.out.println(numbers[i]);
+        ｝
+      </code></pre>
+        <p>
+          This loop prints each element of the <code>numbers</code> array to the console.
+        </p>
+
+        <h2 class="section-title">Example Code</h2>
+        <pre><code>
+        public class ArrayExample ｛
+          public static void main(String[] args) ｛
+            int[] numbers = ｛1, 2, 3, 4, 5｝;
+            for (int i = 0; i &lt; numbers.length; i++) ｛
+              System.out.println(numbers[i]);
+            ｝
+          ｝
+        ｝
+      </code></pre>
+        <p>
+          This Java program creates an array of integers and prints each element to the console using a for loop.
+        </p>
+
+        <h2 class="section-title">Conclusion</h2>
+        <p>
+          Arrays in Java are powerful data structures that allow you to store and manipulate collections of data
+          efficiently. They are widely used in various applications, from simple programs to complex algorithms.
+        </p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('third')">
+        <h1>Java Date Object</h1>
+      </button>
+      <section *ngIf="showInfo.third">
+        <h1 class="title">Java Date Object</h1>
+        <p class="description">
+          In Java, the <code>Date</code> class is used to represent a specific instant in time, with millisecond
+          precision. It is part of the <code>java.util</code> package.
+        </p>
+
+        <h2 class="section-title">Creating a Date Object</h2>
+        <pre><code>import java.util.Date;</code></pre>
+        <pre><code>Date currentDate = new Date();</code></pre>
+
+        <h2 class="section-title">Displaying Date and Time</h2>
+        <p>You can display the current date and time using the <code>toString()</code> method:</p>
+        <pre><code>System.out.println(currentDate.toString());</code></pre>
+
+        <h2 class="section-title">Formatting Date and Time</h2>
+        <p>To format the date and time, you can use the <code>SimpleDateFormat</code> class:</p>
+        <pre><code>
+        import java.text.SimpleDateFormat;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String formattedDate = formatter.format(currentDate);
+        System.out.println(formattedDate);
+      </code></pre>
+
+        <h2 class="section-title">Example Code</h2>
+        <pre><code>
+        import java.util.Date;
+        import java.text.SimpleDateFormat;
+
+        public class DateExample ｛
+          public static void main(String[] args) ｛
+            Date currentDate = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            String formattedDate = formatter.format(currentDate);
+            System.out.println("Current Date: " + formattedDate);
+          ｝
+        ｝
+      </code></pre>
+
+      </section> 
+    </div>   -->
+
+    <!-- // Java Introduction -->
+    <div class="container">
+      <button (click)="toggleInfo('first')">
+        <h1>Java Introduction</h1>
+      </button>
+
+      <section *ngIf="showInfo.first">
+        <h1 class="title">Java Introduction</h1>
+        <p class="description">
+          Java is a high-level, class-based, object-oriented programming
+          language that is designed to have as few implementation dependencies
+          as possible. It is a general-purpose programming language that is
+          concurrent, class-based, and object-oriented.
+        </p>
+
+        <h2 class="section-title">Key Features of Java</h2>
+        <ul>
+          <li>Platform Independence</li>
+          <li>Object-Oriented</li>
+          <li>Robust and Secure</li>
+          <li>Automatic Memory Management</li>
+          <li>Rich Standard Library</li>
+        </ul>
+
+        <h2 class="section-title">Example Code</h2>
+        <pre><code>
+        public class HelloWorld ｛
+          public static void main(String[] args) ｛
+            System.out.println("Hello, World!");
+          ｝
+        ｝
+      </code></pre>
+        <p>
+          This simple Java program prints "Hello, World!" to the console. It
+          demonstrates the basic structure of a Java program, including the
+          class definition and the main method.
+        </p>
+
+        <h2 class="section-title">Getting Started with Java</h2>
+        <ol>
+          <li>Install the Java Development Kit (JDK).</li>
+          <li>
+            Set up your development environment (IDE) like IntelliJ IDEA or
+            Eclipse.
+          </li>
+          <li>Create a new Java project.</li>
+          <li>Write your first Java program.</li>
+          <li>Compile and run your program.</li>
+        </ol>
+        <p>
+          To run a Java program, you need to compile it first using the
+          <code>javac</code> command, and then run it using the
+          <code>java</code> command.
+        </p>
+      </section>
+    </div>
+
+    <!-- Java Getting Started -->
+
+    <div class="container">
+      <button (click)="toggleInfo('second')">
+        <h1>Java Getting Started</h1>
+      </button>
+
+      <section *ngIf="showInfo.second">
+        <h1 class="title">Java Getting Started</h1>
+        <p class="description">To get started with Java, follow these steps:</p>
+        <ol>
+          <li>Install the Java Development Kit (JDK).</li>
+          <li>
+            Set up your development environment (IDE) like IntelliJ IDEA or
+            Eclipse.
+          </li>
+          <li>Create a new Java project.</li>
+          <li>Write your first Java program.</li>
+          <li>Compile and run your program.</li>
+        </ol>
+
+        <h2 class="section-title">Example Code</h2>
+        <pre><code>
+        public class HelloWorld ｛
+          public static void main(String[] args) ｛
+            System.out.println("Hello, World!");
+          ｝
+        ｝
+      </code></pre>
+      </section>
+    </div>
+
+    <!-- Java Syntax -->
+
+    <div class="container">
+      <button (click)="toggleInfo('third')">
+        <h1>Java Syntax</h1>
+      </button>
+
+      <section *ngIf="showInfo.third">
+        <h1 class="title">Java Syntax</h1>
+        <p class="description">
+          Java syntax is the set of rules that define how a Java program is
+          written and interpreted. It includes the structure of statements,
+          expressions, and declarations.
+        </p>
+
+        <h2 class="section-title">Basic Syntax</h2>
+        <ul>
+          <li>Java is case-sensitive.</li>
+          <li>Every Java program must have a main method.</li>
+          <li>Statements end with a semicolon (;).</li>
+          <li>Blocks of code are enclosed in curly braces (｛ ｝).</li>
+        </ul>
+
+        <h2 class="section-title">Example Code</h2>
+        <pre><code>
+        public class HelloWorld ｛
+          public static void main(String[] args) ｛
+            System.out.println("Hello, World!");
+          ｝
+        ｝
+      </code></pre>
+      </section>
+    </div>
+
+    <!-- Java Methods -->
+
+    <div class="container">
+      <button (click)="toggleInfo('four')">
+        <h1>Java Methods</h1>
+      </button>
+
+      <section *ngIf="showInfo.four">
+        <h1 class="title">Java Methods</h1>
+        <p class="description">
+          A method is a block of code which only runs when it is called. You can
+          pass data, known as parameters, into a method. Methods are used to
+          perform certain actions, and they are also known as functions.
+        </p>
+        <h2 class="section-title">Why use methods?</h2>
+        <p>To reuse code: define the code once, and use it many times.</p>
+        <h2 class="section-title">Create a Method</h2>
+        <p>
+          A method must be declared within a class. It is defined with the name
+          of the method, followed by parentheses (). Java provides some
+          pre-defined methods, such as <code>System.out.println()</code>, but
+          you can also create your own methods to perform certain actions:
+        </p>
+        <pre><code>
+public class Main ｛
+  static void myMethod() ｛
+    // code to be executed
+  ｝
+｝
+        </code></pre>
+        <h2 class="section-title">Example Explained</h2>
+        <ul>
+          <li><code>myMethod()</code> is the name of the method.</li>
+          <li>
+            <code>static</code> means that the method belongs to the Main class
+            and not an object of the Main class. You will learn more about
+            objects and how to access methods through objects later in this
+            tutorial.
+          </li>
+          <li>
+            <code>void</code> means that this method does not have a return
+            value. You will learn more about return values later in this
+            chapter.
+          </li>
+        </ul>
+        <h2 class="section-title">Call a Method</h2>
+        <p>
+          To call a method in Java, write the method's name followed by two
+          parentheses () and a semicolon (;).
+        </p>
+        <p>
+          In the following example, <code>myMethod()</code> is used to print a
+          text (the action), when it is called:
+        </p>
+        <pre><code>
+public class Main ｛
+  static void myMethod() ｛
+    System.out.println("I just got executed!");
+  ｝
+  public static void main(String[] args) ｛
+    myMethod();
+  ｝
+｝
+        </code></pre>
+        <p><strong>Outputs:</strong> "I just got executed!"</p>
+        <h2 class="section-title">
+          A method can also be called multiple times:
+        </h2>
+        <pre><code>
+public class Main ｛
+  static void myMethod() ｛
+    System.out.println("I just got executed!");
+  ｝
+  public static void main(String[] args) ｛
+    myMethod();
+    myMethod();
+    myMethod();
+  ｝
+｝
+        </code></pre>
+        <p><strong>Outputs:</strong></p>
+        <ul>
+          <li>I just got executed!</li>
+          <li>I just got executed!</li>
+          <li>I just got executed!</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('five')">
+        <h1>Java Method Parameters</h1>
+      </button>
+
+      <section *ngIf="showInfo.five">
+        <h1 class="title">Java Method Parameters</h1>
+        <p class="description">
+          Information can be passed to methods as a parameter. Parameters act as
+          variables inside the method.
+        </p>
+
+        <h2 class="section-title">Parameters and Arguments</h2>
+        <p>
+          Parameters are specified after the method name, inside the
+          parentheses. You can add as many parameters as you want, just separate
+          them with a comma.
+        </p>
+        <pre><code>
+public class Main ｛
+  static void myMethod(String fname) ｛
+    System.out.println(fname + " Refsnes");
+  }
+  public static void main(String[] args) ｛
+    myMethod("Liam");
+    myMethod("Jenny");
+    myMethod("Anja");
+  }
+  }
+
+        </code></pre>
+        <p>
+          When a parameter is passed to the method, it is called an argument.
+          So, from the example above: <code>fname</code> is a parameter, while
+          <code>Liam</code>, <code>Jenny</code>, and <code>Anja</code> are
+          arguments.
+        </p>
+
+        <h2 class="section-title">Multiple Parameters</h2>
+        <p>You can have as many parameters as you like:</p>
+        <pre><code>   
+public class Main ｛
+  static void myMethod(String fname, int age) ｛
+    System.out.println(fname + " is " + age);
+  }
+  public static void main(String[] args) ｛
+    myMethod("Liam", 5);
+    myMethod("Jenny", 8);
+    myMethod("Anja", 31);
+  }
+  }
+
+        </code></pre>
+        <p>
+          Note that when you are working with multiple parameters, the method
+          call must have the same number of arguments as there are parameters,
+          and the arguments must be passed in the same order.
+        </p>
+
+        <h2 class="section-title">A Method with If...Else</h2>
+        <p>It is common to use if...else statements inside methods:</p>
+        <pre><code>
+public class Main ｛
+  // Create a checkAge() method with an integer variable called age
+  static void checkAge(int age) ｛
+    // If age is less than 18, print "access denied"
+    if (age < 18) ｛
+      System.out.println("Access denied - You are not old enough!");
+    // If age is greater than, or equal to, 18, print "access granted"
+    } else ｛
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+  public static void main(String[] args) ｛
+    checkAge(20); // Call the checkAge method and pass along an age of 20
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> "Access granted - You are old enough!"</p>
+      </section>
+    </div>
+
+    <!-- Java Method Return -->
+
+    <div class="container">
+      <button (click)="toggleInfo('six')">
+        <h1>Java Method Return</h1>
+      </button>
+
+      <section *ngIf="showInfo.six">
+        <h1 class="title">Java Method Return</h1>
+        <p class="description">
+          In the previous page, we used the void keyword in all examples, which
+          indicates that the method should not return a value.
+        </p>
+
+        <h2 class="section-title">Return Values</h2>
+        <p>
+          If you want the method to return a value, you can use a primitive data
+          type (such as int, char, etc.) instead of void, and use the return
+          keyword inside the method:
+        </p>
+        <pre><code>
+public class Main ｛
+  static int myMethod(int x) ｛
+    return 5 + x;
+  }
+  public static void main(String[] args) ｛
+    System.out.println(myMethod(3));
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> 8 (5 + 3)</p>
+
+        <h2 class="section-title">
+          Example of Returning the Sum of Two Parameters
+        </h2>
+        <pre><code>
+public class Main ｛
+  static int myMethod(int x, int y) ｛
+    return x + y;
+  }
+  public static void main(String[] args) ｛
+    System.out.println(myMethod(5, 3));
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> 8 (5 + 3)</p>
+
+        <h2 class="section-title">Storing the Result in a Variable</h2>
+        <p>
+          You can also store the result in a variable (recommended, as it is
+          easier to read and maintain):
+        </p>
+        <pre><code>
+public class Main ｛
+  static int myMethod(int x, int y) ｛
+    return x + y;
+  } 
+  public static void main(String[] args) ｛
+    int z = myMethod(5, 3);
+    System.out.println(z);
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> 8 (5 + 3)</p>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('seven')">
+        <h1>Java Method Overloading</h1>
+      </button>
+
+      <section *ngIf="showInfo.seven">
+        <h1 class="title">Java Method Overloading</h1>
+        <p class="description">
+          Method overloading is a feature that allows a class to have more than
+          one method with the same name, as long as their parameter lists are
+          different.
+        </p>
+
+        <h2 class="section-title">Example of Method Overloading</h2>
+        <pre><code>
+public class Main ｛
+  static int add(int a, int b) ｛
+    return a + b;
+  }
+  static double add(double a, double b) ｛
+    return a + b;
+  }
+  public static void main(String[] args) ｛
+    System.out.println(add(5, 3)); // Calls the first add method
+    System.out.println(add(5.5, 3.3)); // Calls the second add method
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong></p>
+        <ul>
+          <li>8 (from the first add method)</li>
+          <li>8.8 (from the second add method)</li>
+        </ul>
+
+        <h2 class="section-title">Explanation of Method Overloading</h2>
+        <ul>
+          <li>
+            The first <code>add</code> method takes two integers as parameters
+            and returns their sum.
+          </li>
+          <li>
+            The second <code>add</code> method takes two doubles as parameters
+            and returns their sum.
+          </li>
+          <li>
+            The Java compiler determines which method to call based on the
+            argument types passed during the method call.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('eight')">
+        <h1>Java Method Overriding</h1>
+      </button>
+
+      <section *ngIf="showInfo.eight">
+        <h1 class="title">Java Method Overriding</h1>
+        <p class="description">
+          Method overriding is a feature that allows a subclass to provide a
+          specific implementation of a method that is already defined in its
+          superclass.
+        </p>
+
+        <h2 class="section-title">Example of Method Overriding</h2>
+        <pre><code>
+public class Animal ｛
+  void sound() ｛
+    System.out.println("Animal makes a sound");
+  }
+}
+public class Dog extends Animal ｛
+  @Override
+  void sound() ｛
+    System.out.println("Dog barks");
+  }
+}
+  public class Main ｛
+  public static void main(String[] args) ｛
+    Animal myDog = new Dog();
+    myDog.sound(); // Calls the overridden method in Dog class
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> "Dog barks"</p>
+
+        <h2 class="section-title">Explanation of Method Overriding</h2>
+        <ul>
+          <li>
+            The <code>Animal</code> class has a method called
+            <code>sound</code>.
+          </li>
+          <li>
+            The <code>Dog</code> class extends the <code>Animal</code> class and
+            overrides the <code>sound</code> method.
+          </li>
+          <li>
+            The <code>@Override</code> annotation indicates that the method is
+            being overridden.
+          </li>
+          <li>
+            When the <code>sound</code> method is called on an instance of
+            <code>Dog</code>, it executes the overridden method in the
+            <code>Dog</code> class.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('nine')">
+        <h1>Java Method Chaining</h1>
+      </button>
+
+      <section *ngIf="showInfo.nine">
+        <h1 class="title">Java Method Chaining</h1>
+        <p class="description">
+          Method chaining is a technique where multiple methods can be called on
+          the same object in a single statement.
+        </p>
+
+        <h2 class="section-title">Example of Method Chaining</h2>
+        <pre><code>
+          public class StringBuilderExample ｛
+  public static void main(String[] args) ｛  
+    StringBuilder sb = new StringBuilder();
+    sb.append("Hello, ").append("World!").append(" How are you?");
+    System.out.println(sb.toString());
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> "Hello, World! How are you?"</p>
+
+        <h2 class="section-title">Explanation of Method Chaining</h2>
+        <ul>
+          <li>
+            The <code>StringBuilder</code> class is used to create a mutable
+            sequence of characters.
+          </li>
+          <li>
+            The <code>append</code> method is called multiple times on the same
+            <code>StringBuilder</code> object.
+          </li>
+          <li>
+            Each call to <code>append</code> returns the same
+            <code>StringBuilder</code> object, allowing for method chaining.
+          </li>
+          <li>
+            The final result is obtained by calling the
+            <code>toString</code> method on the
+            <code>StringBuilder</code> object.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('ten')">
+        <h1>Java Method Recursion</h1>
+      </button>
+
+      <section *ngIf="showInfo.ten">
+        <h1 class="title">Java Method Recursion</h1>
+        <p class="description">
+          Recursion is a programming technique where a method calls itself to
+          solve a problem.
+        </p>
+
+        <h2 class="section-title">Example of Recursion</h2>
+        <pre><code>
+public class FactorialExample ｛
+  static int factorial(int n) ｛
+    if (n == 0) ｛
+      return 1; // Base case
+    } else ｛
+      return n * factorial(n - 1); // Recursive call
+    }
+  }
+  public static void main(String[] args) ｛
+    int result = factorial(5);
+    System.out.println("Factorial of 5 is: " + result);
+  }
+  }
+
+        </code></pre>
+        <p><strong>Outputs:</strong> "Factorial of 5 is: 120"</p>
+
+        <h2 class="section-title">Explanation of Recursion</h2>
+        <ul>
+          <li>
+            The <code>factorial</code> method calculates the factorial of a
+            number using recursion.
+          </li>
+          <li>The base case is when <code>n</code> is 0, returning 1.</li>
+          <li>
+            For other values, the method calls itself with a decremented value
+            of <code>n</code>.
+          </li>
+          <li>
+            This continues until the base case is reached, at which point the
+            recursive calls start returning and multiplying the results.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('eleven')">
+        <h1>Java Classes and Objects</h1>
+      </button>
+
+      <section *ngIf="showInfo.eleven">
+        <h1 class="title">Java Classes and Objects</h1>
+        <p class="description">
+          In Java, a class is a blueprint for creating objects. An object is an
+          instance of a class.
+        </p>
+
+        <h2 class="section-title">Creating a Class</h2>
+        <pre><code>
+public class Car ｛
+  String color;
+  String model;
+  int year;
+  void displayInfo() ｛
+    System.out.println("Car Model: " + model + ", Color: " + color + ", Year: " + year);
+  ｝
+｝
+        </code></pre>
+        <p>
+          This class defines a <code>Car</code> with attributes
+          <code>color</code>, <code>model</code>, and <code>year</code>, and a
+          method <code>displayInfo()</code> to print the car's information.
+        </p>
+
+        <h2 class="section-title">Creating an Object</h2>
+        <pre><code>
+public class Main ｛
+public static void main(String[] args) ｛
+    Car myCar = new Car(); // Creating an object of the Car class
+    myCar.color = "Red";
+    myCar.model = "Toyota";
+    myCar.year = 2020;
+    myCar.displayInfo(); // Calling the method to display car information
+  }
+｝
+        </code></pre>
+        <p>
+          <strong>Outputs:</strong> "Car Model: Toyota, Color: Red, Year: 2020"
+        </p>
+
+        <h2 class="section-title">Explanation of Classes and Objects</h2>
+        <ul>
+          <li>
+            A class is defined using the <code>class</code> keyword followed by
+            the class name.
+          </li>
+          <li>
+            Attributes (or fields) are variables that hold the state of an
+            object.
+          </li>
+          <li>
+            Methods define the behavior of the class and can manipulate its
+            attributes.
+          </li>
+          <li>
+            An object is created using the <code>new</code> keyword followed by
+            the class constructor.
+          </li>
+          <li>
+            Attributes of the object can be accessed and modified using the dot
+            notation.
+          </li>
+          <li>
+            Methods of the object can be called using the dot notation as well.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <button (click)="toggleInfo('twelve')">
+        <h1>Java OOP Concepts</h1>
+      </button>
+
+      <section *ngIf="showInfo.twelve">
+        <h1 class="title">Java OOP Concepts</h1>
+        <p class="description">
+          Java is an object-oriented programming (OOP) language, which means it
+          uses objects to represent data and methods to manipulate that data.
+        </p>
+
+        <h2 class="section-title">Key OOP Concepts</h2>
+        <ul>
+          <li>
+            Encapsulation: Bundling data and methods that operate on that data
+            within a single unit (class).
+          </li>
+          <li>
+            Inheritance: Mechanism where one class can inherit fields and
+            methods from another class.
+          </li>
+          <li>
+            Polymorphism: Ability of different classes to be treated as
+            instances of the same class through a common interface.
+          </li>
+          <li>
+            Abstraction: Hiding complex implementation details and showing only
+            the essential features of the object.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Example of OOP in Java</h2>
+        <pre><code>
+public class Animal ｛
+  void sound() ｛
+    System.out.println("Animal makes a sound");
+  }
+}
+public class Dog extends Animal ｛
+  @Override
+  void sound() ｛
+    System.out.println("Dog barks");
+  }
+}
+public class Main ｛
+  public static void main(String[] args) ｛
+    Animal myDog = new Dog(); // Inheritance and Polymorphism
+    myDog.sound(); // Calls the overridden method in Dog class
+  }
+｝
+        </code></pre>
+        <p><strong>Outputs:</strong> "Dog barks"</p>
+
+        <h2 class="section-title">Explanation of OOP Concepts</h2>
+        <ul>
+          <li>
+            The <code>Animal</code> class is a base class with a method
+            <code>sound()</code>.
+          </li>
+          <li>
+            The <code>Dog</code> class extends the <code>Animal</code> class and
+            overrides the <code>sound()</code> method.
+          </li>
+          <li>
+            The <code>@Override</code> annotation indicates that the method is
+            being overridden.
+          </li>
+          <li>
+            The main method demonstrates inheritance and polymorphism by
+            creating an instance of <code>Dog</code> but treating it as an
+            instance of <code>Animal</code>.
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
   <!-- Introduction to javascript -->
 
   <div class="main-con" *ngIf="courseId === 5">
@@ -343,7 +2090,12 @@
           &lt;/html&gt;
       </code>
   </pre>
-        <img class="output-image" src="./assets/javascript/01/output-4.png" alt="output-1" width="800px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/01/output-4.png"
+          alt="output-1"
+          width="800px"
+        />
 
         <h3 class="subheading">
           2. <code class="inline-code">console.warn()</code>
@@ -376,7 +2128,12 @@
           &lt;/html&gt;
       </code>
   </pre>
-        <img class="output-image" src="./assets/javascript/01/output-5.png" alt="output-1" width="800px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/01/output-5.png"
+          alt="output-1"
+          width="800px"
+        />
 
         <h3 class="subheading">
           3. <code class="inline-code">console.error()</code>
@@ -408,7 +2165,12 @@
           &lt;/html&gt;
       </code>
   </pre>
-        <img class="output-image" src="./assets/javascript/01/output-6.png" alt="output-1" width="800px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/01/output-6.png"
+          alt="output-1"
+          width="800px"
+        />
 
         <h3 class="subheading">What is Document?</h3>
         <p class="description">
@@ -443,7 +2205,12 @@
           &lt;/html&gt;
       </code>
   </pre>
-        <img class="output-image" src="./assets/javascript/01/output-1.jpg" alt="output-1" width="800px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/01/output-1.jpg"
+          alt="output-1"
+          width="800px"
+        />
 
         <h4 class="subheading">2. External JavaScript</h4>
         <p class="description">
@@ -474,7 +2241,12 @@
           document.write("Hello World");
       </code>
   </pre>
-        <img class="output-image" src="./assets/javascript/01/output-1.jpg" alt="output-1" width="800px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/01/output-1.jpg"
+          alt="output-1"
+          width="800px"
+        />
 
         <h3 class="subheading">What is Window?</h3>
         <p class="description">
@@ -510,7 +2282,12 @@
           &lt;/html&gt;
       </code>
   </pre>
-        <img class="output-image" src="./assets/javascript/01/output-2.png" alt="output-1" width="800px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/01/output-2.png"
+          alt="output-1"
+          width="800px"
+        />
 
         <h3 class="subheading"><code class="inline-code">prompt()</code></h3>
         <p class="description">
@@ -550,7 +2327,12 @@
             <li><strong>Boolean</strong></li>
           </ol>
 
-          <img class="output-image" src="./assets/javascript/02/output-1.jpg" alt="output-1" width="600px" />
+          <img
+            class="output-image"
+            src="./assets/javascript/02/output-1.jpg"
+            alt="output-1"
+            width="600px"
+          />
           <p class="note">
             <em>CHECK BELOW TO KNOW ALL THE DATA TYPES 👇</em>
           </p>
@@ -561,7 +2343,12 @@
             <p>A string is a data type used to represent textual data...</p>
             <pre><code class="example-code">"Hello, I'm a string"</code></pre>
             <pre><code class="example-code">'Hello, How are you...'</code></pre>
-            <img class="output-image" src="./assets/javascript/02/output-2.jpg" alt="output-2" width="600px" />
+            <img
+              class="output-image"
+              src="./assets/javascript/02/output-2.jpg"
+              alt="output-2"
+              width="600px"
+            />
           </section>
 
           <!-- Number Section -->
@@ -573,17 +2360,32 @@
             </p>
             <h4 class="datatype-subheading">a. Int</h4>
             <pre><code class="example-code">123456</code></pre>
-            <img class="output-image" src="./assets/javascript/02/output-3.jpg" alt="output-3" width="600px" />
+            <img
+              class="output-image"
+              src="./assets/javascript/02/output-3.jpg"
+              alt="output-3"
+              width="600px"
+            />
             <h4 class="datatype-subheading">b. Float</h4>
             <pre><code class="example-code">8793.90</code></pre>
-            <img class="output-image" src="./assets/javascript/02/output-4.jpg" alt="output-4" width="600px" />
+            <img
+              class="output-image"
+              src="./assets/javascript/02/output-4.jpg"
+              alt="output-4"
+              width="600px"
+            />
           </section>
 
           <!-- Boolean Section -->
           <section class="datatype-section">
             <h3 class="datatype-heading">3. Boolean</h3>
             <pre><code class="example-code">true or false</code></pre>
-            <img class="output-image" src="./assets/javascript/02/output-5.jpg" alt="output-5" width="600px" />
+            <img
+              class="output-image"
+              src="./assets/javascript/02/output-5.jpg"
+              alt="output-5"
+              width="600px"
+            />
           </section>
         </section>
 
@@ -824,20 +2626,20 @@
         <p><strong>Output:</strong> <span class="output">true</span></p>
 
         <h3>4. Less Than (<)</h3>
-            <pre><code>let a = 5; let b = 10; let res = a < b; document.write(res);</code></pre>
-            <p><strong>Output:</strong> <span class="output">true</span></p>
+        <pre><code>let a = 5; let b = 10; let res = a < b; document.write(res);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
 
-            <h3>5. Greater Than (>)</h3>
-            <pre><code>let a = 50; let b = 10; let res = a > b; document.write(res);</code></pre>
-            <p><strong>Output:</strong> <span class="output">true</span></p>
+        <h3>5. Greater Than (>)</h3>
+        <pre><code>let a = 50; let b = 10; let res = a > b; document.write(res);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
 
-            <h3>6. Less Than or Equal to (<=)</h3>
-                <pre><code>let a = 5; let b = 10; let res = a <= b; document.write(res);</code></pre>
-                <p><strong>Output:</strong> <span class="output">true</span></p>
+        <h3>6. Less Than or Equal to (<=)</h3>
+        <pre><code>let a = 5; let b = 10; let res = a <= b; document.write(res);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
 
-                <h3>7. Greater Than or Equal to (>=)</h3>
-                <pre><code>let a = 50; let b = 10; let res = a >= b; document.write(res);</code></pre>
-                <p><strong>Output:</strong> <span class="output">true</span></p>
+        <h3>7. Greater Than or Equal to (>=)</h3>
+        <pre><code>let a = 50; let b = 10; let res = a >= b; document.write(res);</code></pre>
+        <p><strong>Output:</strong> <span class="output">true</span></p>
       </section>
     </div>
 
@@ -930,7 +2732,12 @@
           &lt;/body&gt;
           &lt;/html&gt;
       </code></pre>
-        <img class="output-image" src="./assets/javascript/06/screenshot-8.png" alt="output-4" width="600px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/06/screenshot-8.png"
+          alt="output-4"
+          width="600px"
+        />
 
         <h3>Example 2</h3>
         <pre class="code-example">
@@ -950,8 +2757,18 @@
         
       </code></pre>
         <div style="display: flex; flex-wrap: wrap">
-          <img class="output-image" src="./assets/javascript/06/screenshot-8.png" alt="output-4" width="600px" />
-          <img class="output-image" src="./assets/javascript/06/screenshot-9.png" alt="output-4" width="600px" />
+          <img
+            class="output-image"
+            src="./assets/javascript/06/screenshot-8.png"
+            alt="output-4"
+            width="600px"
+          />
+          <img
+            class="output-image"
+            src="./assets/javascript/06/screenshot-9.png"
+            alt="output-4"
+            width="600px"
+          />
         </div>
         <!-- <p><strong>Output:</strong> <span class="output">{{ confirmResponse }}</span></p> -->
 
@@ -979,7 +2796,12 @@
         
       </code></pre>
 
-        <img class="output-image" src="./assets/javascript/06/screenshot-7.png" alt="output-4" width="600px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/06/screenshot-7.png"
+          alt="output-4"
+          width="600px"
+        />
 
         <h3>Example 2</h3>
         <pre class="code-example">
@@ -999,7 +2821,12 @@
         
       </code></pre>
 
-        <img class="output-image" src="./assets/javascript/06/screenshot-6.png" alt="output-4" width="600px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/06/screenshot-6.png"
+          alt="output-4"
+          width="600px"
+        />
 
         <h2 class="section-title">Default Value in Prompt</h2>
         <pre class="code-example">
@@ -1018,7 +2845,12 @@
         
       </code></pre>
 
-        <img class="output-image" src="./assets/javascript/06/screenshot-5.png" alt="output-4" width="600px" />
+        <img
+          class="output-image"
+          src="./assets/javascript/06/screenshot-5.png"
+          alt="output-4"
+          width="600px"
+        />
 
         <h2 class="section-title">Using parseInt() and parseFloat()</h2>
         <h3>Example of parseInt()</h3>
@@ -1055,12 +2887,28 @@
         <h2 class="section-title">Commonly Used Math Functions</h2>
         <ul>
           <li><code>Math.abs(x)</code>: Returns the absolute value of x.</li>
-          <li><code>Math.ceil(x)</code>: Rounds x up to the nearest integer.</li>
-          <li><code>Math.floor(x)</code>: Rounds x down to the nearest integer.</li>
-          <li><code>Math.max(...values)</code>: Returns the largest value from a list of numbers.</li>
-          <li><code>Math.min(...values)</code>: Returns the smallest value from a list of numbers.</li>
-          <li><code>Math.pow(base, exponent)</code>: Returns base raised to the power of exponent.</li>
-          <li><code>Math.random()</code>: Returns a random number between 0 (inclusive) and 1 (exclusive).</li>
+          <li>
+            <code>Math.ceil(x)</code>: Rounds x up to the nearest integer.
+          </li>
+          <li>
+            <code>Math.floor(x)</code>: Rounds x down to the nearest integer.
+          </li>
+          <li>
+            <code>Math.max(...values)</code>: Returns the largest value from a
+            list of numbers.
+          </li>
+          <li>
+            <code>Math.min(...values)</code>: Returns the smallest value from a
+            list of numbers.
+          </li>
+          <li>
+            <code>Math.pow(base, exponent)</code>: Returns base raised to the
+            power of exponent.
+          </li>
+          <li>
+            <code>Math.random()</code>: Returns a random number between 0
+            (inclusive) and 1 (exclusive).
+          </li>
           <li><code>Math.round(x)</code>: Rounds x to the nearest integer.</li>
         </ul>
 
@@ -1098,7 +2946,6 @@
         <pre><code>const num = 4.7; const rounded = Math.round(num); console.log(rounded);</code></pre>
         <p><strong>Output:</strong> 5</p>
       </section>
-
     </div>
 
     <div class="container">
@@ -1109,9 +2956,9 @@
       <section *ngIf="showInfo.eight">
         <h1 class="title">JavaScript Date Object</h1>
         <p class="description">
-          The Date object in JavaScript is used to work with dates and times.
-          It provides methods to get and set various components of a date, such
-          as year, month, day, hour, minute, second, and millisecond.
+          The Date object in JavaScript is used to work with dates and times. It
+          provides methods to get and set various components of a date, such as
+          year, month, day, hour, minute, second, and millisecond.
         </p>
 
         <h2 class="section-title">Creating a Date Object</h2>
@@ -1125,7 +2972,9 @@
           <li><code>getHours()</code>: Returns the hour (0-23).</li>
           <li><code>getMinutes()</code>: Returns the minutes (0-59).</li>
           <li><code>getSeconds()</code>: Returns the seconds (0-59).</li>
-          <li><code>getMilliseconds()</code>: Returns the milliseconds (0-999).</li>
+          <li>
+            <code>getMilliseconds()</code>: Returns the milliseconds (0-999).
+          </li>
         </ul>
 
         <h2 class="section-title">Example</h2>
@@ -1135,9 +2984,7 @@
         console.log(currentDate.getMonth()); // 9 (October)
         console.log(currentDate.getDate()); // 5
       </code></pre>
-
       </section>
-
     </div>
 
     <div class="container">
@@ -1161,9 +3008,18 @@
           <li><code>length</code>: Returns the length of the string.</li>
           <li><code>toUpperCase()</code>: Converts the string to uppercase.</li>
           <li><code>toLowerCase()</code>: Converts the string to lowercase.</li>
-          <li><code>charAt(index)</code>: Returns the character at the specified index.</li>
-          <li><code>indexOf(substring)</code>: Returns the index of the first occurrence of a substring.</li>
-          <li><code>substring(start, end)</code>: Returns a substring from the string.</li>
+          <li>
+            <code>charAt(index)</code>: Returns the character at the specified
+            index.
+          </li>
+          <li>
+            <code>indexOf(substring)</code>: Returns the index of the first
+            occurrence of a substring.
+          </li>
+          <li>
+            <code>substring(start, end)</code>: Returns a substring from the
+            string.
+          </li>
         </ul>
 
         <h2 class="section-title">Example</h2>
@@ -1172,9 +3028,7 @@
         console.log(myString.length); // 13
         console.log(myString.toUpperCase()); // "HELLO, WORLD!"
       </code></pre>
-
       </section>
-
     </div>
 
     <div class="container">
@@ -1186,8 +3040,8 @@
         <h1 class="title">JavaScript Array Object</h1>
         <p class="description">
           The Array object in JavaScript is used to work with arrays, which are
-          ordered collections of values. It provides various methods to manipulate
-          and interact with arrays.
+          ordered collections of values. It provides various methods to
+          manipulate and interact with arrays.
         </p>
 
         <h2 class="section-title">Creating an Array Object</h2>
@@ -1196,12 +3050,23 @@
         <h2 class="section-title">Common Array Methods</h2>
         <ul>
           <li><code>length</code>: Returns the length of the array.</li>
-          <li><code>push(value)</code>: Adds a value to the end of the array.</li>
+          <li>
+            <code>push(value)</code>: Adds a value to the end of the array.
+          </li>
           <li><code>pop()</code>: Removes the last value from the array.</li>
           <li><code>shift()</code>: Removes the first value from the array.</li>
-          <li><code>unshift(value)</code>: Adds a value to the beginning of the array.</li>
-          <li><code>indexOf(value)</code>: Returns the index of the first occurrence of a value.</li>
-          <li><code>slice(start, end)</code>: Returns a shallow copy of a portion of an array.</li>
+          <li>
+            <code>unshift(value)</code>: Adds a value to the beginning of the
+            array.
+          </li>
+          <li>
+            <code>indexOf(value)</code>: Returns the index of the first
+            occurrence of a value.
+          </li>
+          <li>
+            <code>slice(start, end)</code>: Returns a shallow copy of a portion
+            of an array.
+          </li>
         </ul>
 
         <h2 class="section-title">Example</h2>
@@ -1211,13 +3076,10 @@
         myArray.push(6);
         console.log(myArray); // [1, 2, 3, 4, 5, 6]
       </code></pre>
-
       </section>
-
     </div>
 
-        <div class="container">
-
+    <div class="container">
       <button (click)="toggleInfo('eleven')">
         <h1>JavaScript Date Object</h1>
       </button>
@@ -1225,34 +3087,54 @@
       <section *ngIf="showInfo.eleven">
         <h1 class="title">JavaScript Date Object</h1>
         <p class="description">
-          The Date object in JavaScript is used to work with dates and times. It provides methods to create, manipulate,
-          and format dates.
+          The Date object in JavaScript is used to work with dates and times. It
+          provides methods to create, manipulate, and format dates.
         </p>
 
         <h2 class="section-title">What is a Date Object?</h2>
         <p>
-          A Date object represents a single moment in time in a platform-independent format. It can be used to represent
-          any date and time, including past, present, and future dates.
+          A Date object represents a single moment in time in a
+          platform-independent format. It can be used to represent any date and
+          time, including past, present, and future dates.
         </p>
         <h2 class="section-title">Creating a Date Object</h2>
         <pre><code>const currentDate = new Date();</code></pre>
         <p>
-          You can create a Date object using the <code>new Date()</code> constructor. This will create a Date object
+          You can create a Date object using the
+          <code>new Date()</code> constructor. This will create a Date object
           representing the current date and time.
         </p>
         <h2 class="section-title">Common Date Methods</h2>
         <ul>
           <li><code>getFullYear()</code>: Returns the year of the date.</li>
-          <li><code>getMonth()</code>: Returns the month of the date (0-11).</li>
+          <li>
+            <code>getMonth()</code>: Returns the month of the date (0-11).
+          </li>
           <li><code>getDate()</code>: Returns the day of the month (1-31).</li>
           <li><code>getHours()</code>: Returns the hour of the date (0-23).</li>
-          <li><code>getMinutes()</code>: Returns the minutes of the date (0-59).</li>
-          <li><code>getSeconds()</code>: Returns the seconds of the date (0-59).</li> 
+          <li>
+            <code>getMinutes()</code>: Returns the minutes of the date (0-59).
+          </li>
+          <li>
+            <code>getSeconds()</code>: Returns the seconds of the date (0-59).
+          </li>
 
-          <li><code>getTime()</code>: Returns the number of milliseconds since January 1, 1970.</li>
-          <li><code>toISOString()</code>: Returns the date in ISO format (YYYY-MM-DDTHH:mm:ss.sssZ).</li>
-          <li><code>toLocaleDateString()</code>: Returns the date in a localized format.</li>
-          <li><code>toLocaleTimeString()</code>: Returns the time in a localized format.</li>
+          <li>
+            <code>getTime()</code>: Returns the number of milliseconds since
+            January 1, 1970.
+          </li>
+          <li>
+            <code>toISOString()</code>: Returns the date in ISO format
+            (YYYY-MM-DDTHH:mm:ss.sssZ).
+          </li>
+          <li>
+            <code>toLocaleDateString()</code>: Returns the date in a localized
+            format.
+          </li>
+          <li>
+            <code>toLocaleTimeString()</code>: Returns the time in a localized
+            format.
+          </li>
         </ul>
         <h2 class="section-title">Example</h2>
         <pre><code>
@@ -1268,663 +3150,8 @@
         console.log(currentDate.toLocaleTimeString()); // "12:34:56 PM" (or localized format)
       </code></pre>
       </section>
-
     </div>
-
   </div>
 
-
-
-
-
-  <div class="main-con" *ngIf="courseId === 2">
-    <div class="container">
-
-      <button (click)="toggleInfo('first')">
-        <h1>Introduction To React JS</h1>
-      </button>
-
-      <section *ngIf="showInfo.first">
-
-        <h1 class="title">Introduction To React JS</h1>
-        <p class="description">
-          React is a JavaScript frontend library for building user interfaces. It
-          is maintained by Facebook and a community of individual developers and
-          companies. You can use React to make single-page websites or mobile
-          apps, which can be pretty cool!
-        </p>
-
-        <h2 class="section-title">What React Does</h2>
-        <ul>
-          <li>
-            <strong>It's a JavaScript Library:</strong> React is not a framework;
-            it's a library. Think of it as a collection of useful code that you
-            can use to build your UI.
-          </li>
-          <li>
-            <strong>Developed by Facebook (Meta):</strong> Yep, smart folks at
-            Facebook created React and continue to improve it.
-          </li>
-          <li>
-            <strong>Component-Based Development:</strong> React is all about
-            building reusable building blocks called components. You make a
-            component once, and then you can use it in many different places on
-            your website or app.
-          </li>
-          <li>
-            <strong>Micro Frontend:</strong> React can be used to build small
-            parts of a website.
-          </li>
-        </ul>
-
-        <h2 class="section-title">Awesome Features of React</h2>
-        <ol>
-          <li>Component based development</li>
-          <li>Fast</li>
-          <li>Virtual DOM</li>
-          <li>HMR (Hot Module Reloading)</li>
-          <li>JSX</li>
-        </ol>
-
-        <h3>Component based development</h3>
-        <p>
-          Component-based development in React means building applications using
-          reusable and standalone components, each representing a UI part with its
-          own logic and styling.
-        </p>
-
-        <h3>Fast</h3>
-        <p>
-          React is speedy. It helps your web pages load quickly and run smoothly.
-        </p>
-
-        <h3>Hot Module Reloading (HMR)</h3>
-        <p>
-          This is like magic for developers. It lets you see your code changes
-          right away without refreshing your whole page.
-        </p>
-
-        <h3>Real DOM vs Virtual DOM</h3>
-        <p>
-          The Virtual DOM is a lightweight, in-memory representation of the actual
-          DOM. Developers use frameworks like React to work with the Virtual DOM.
-        </p>
-
-        <h3>JSX</h3>
-        <p>
-          JSX stands for JavaScript XML. It's a syntax extension for JavaScript
-          used in React to describe the structure and layout of user interfaces.
-        </p>
-
-        <h2 class="section-title">Some Handy Terms</h2>
-        <ul>
-          <li>
-            <strong>npm (Node Package Manager):</strong> npm is like a super cool
-            store for JavaScript code.
-          </li>
-          <li>
-            <strong>npx (Node Package Executer):</strong> npx is like a magical
-            button that runs code packages from npm without installing them
-            permanently.
-          </li>
-        </ul>
-
-        <h2 class="section-title">Create React App</h2>
-        <ol>
-          <li>
-            Create a folder and name it (whatever name you want to keep)
-            <code>First_Flight</code>.
-          </li>
-          <li>Open it in VS Code editor.</li>
-          <li>Create a file named <code>package.json</code>.</li>
-          <li>
-            In <code>package.json</code>, create an object with the project name:
-          </li>
-          <pre><code>
-          ｛
-              "name": "first_flight"
-           ｝
-        </code></pre>
-          <li>Write the version of the project:</li>
-          <pre><code>"version": "1.0.0"</code></pre>
-          <li>Write the dependencies:</li>
-          <pre><code>"dependencies":｛ ｝</code></pre>
-          <li>Run <code>npm i react</code> to install React.</li>
-          <li>Run <code>npm i react-dom</code> to install React DOM.</li>
-          <li>
-            Create a folder named <code>public</code> and create an
-            <code>index.html</code> file inside it.
-          </li>
-          <li>Write the basic HTML structure in <code>index.html</code>.</li>
-          <li>
-            Create a folder named <code>src</code> and create a file named
-            <code>main.js</code> inside it.
-          </li>
-          <li>Import ReactDOM in <code>main.js</code>:</li>
-          <pre><code>import ReactDOM from "react-dom/client";</code></pre>
-          <li>Create a root element.</li>
-          <li>Install react-scripts with <code>npm i react-scripts</code>.</li>
-          <li>Add a script in <code>package.json</code>:</li>
-          <pre><code>"scripts": ｛
-      "start": "react-scripts start"
-    ｝</code></pre>
-          <li>Run <code>npm start</code> to start the application.</li>
-        </ol>
-
-        <h2 class="section-title">Example package.json</h2>
-        <pre><code>｛
-      "name": "first_flight",
-      "version": "1.0.0",
-      "scripts": 
-      ｛
-        "start": "react-scripts start"
-      ｝,
-      "dependencies": 
-      ｛
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-scripts": "^5.0.1"
-      ｝,
-      "browserslist": 
-      ｛
-        "production": [
-          ">0.2%",
-          "not dead",
-          "not op_mini all"
-        ],
-        "development": [
-          "last 1 chrome version",
-          "last 1 firefox version",
-          "last 1 safari version"
-        ]
-      ｝
-    ｝</code></pre>
-
-      </section>
-    </div>
-
-
-
-    <div class="container">
-
-      <button (click)="toggleInfo('second')">
-        <h1>How to Create a React App</h1>
-      </button>
-
-      <section *ngIf="showInfo.second">
-        <h1 class="title">How to Create a React App</h1>
-        <p class="description">There are primarily two best ways to create a new React app:</p>
-        <ol>
-          <li>Using CRA (create-react-app).</li>
-          <li>Using Vite.</li>
-        </ol>
-        <p><strong>Both tools are popular and offer unique advantages for different project needs.</strong></p>
-
-        <h2 class="section-title">1. Using create-react-app</h2>
-        <p>It was created and is maintained by Facebook's React team.</p>
-        <p>It uses Webpack internally.</p>
-
-        <h3>Steps to Create a React App using CRA:</h3>
-        <ol>
-          <li>Ensure that you have installed <code>node.js</code> on your machine.</li>
-          <li>Open terminal or Git Bash, then type <code>npx create-react-app (name)</code> (e.g.,
-            <code>npx create-react-app foody</code>).</li>
-          <li>It will take some time to create the React app.</li>
-          <li>It will install some packages: <code>react</code>, <code>react-dom</code>, and <code>react-scripts</code>.
-          </li>
-          <li>Close the terminal and open that folder in VS Code.</li>
-          <li>Open the terminal in VS Code.</li>
-          <li>You will see all the necessary folders and files created.</li>
-          <li>It will redirect to your default browser.</li>
-          <li>Write this command: <code>npm start</code>. This command is used to start the development server.</li>
-          <li>Open <code>package.json</code> file; you will see it installed lots of extra libraries like
-            <code>@testing-library/jest-dom</code>, <code>@testing-library/react</code>,
-            <code>@testing-library/user-event</code>, etc.</li>
-          <li>Run <code>npm run build</code> to create a production-ready build of the application.</li>
-        </ol>
-
-        <h2 class="section-title">2. Using Vite</h2>
-        <p>Vite is an open-source project created by Evan You, the creator of Vue.js.</p>
-        <p>It's a modern build tool that aims to provide a faster and more efficient development experience for frontend
-          developers.</p>
-        <p>It has lightning-fast HMR (Hot Module Reloading) and comes with lots of features and plugins.</p>
-
-        <h3>Steps to Create a React App using Vite:</h3>
-        <ol>
-          <li>Open terminal and type <code>npm create vite@latest</code>.</li>
-          <li>Next, it will ask for a name to keep.</li>
-          <li>Next, it will ask to choose a framework; choose React (use arrow keys to navigate).</li>
-          <li>It will ask to choose a variant; choose your favorite variant.</li>
-          <li>Close the terminal and open that folder in VS Code.</li>
-          <li>Open the terminal in VS Code and type <code>npm i</code> to install all the necessary libraries and
-            dependencies.</li>
-        </ol>
-
-        <h3>Vite Folder Structure</h3>
-        <img src="./assets/react/02/02-vite-folder.png" alt="Vite Folder Structure" width="600px" />
-
-        <h3>Vite package.json File</h3>
-        <img src="./assets/react/02/03-vite-json.png" alt="Vite package.json" width="600px" />
-
-        <h3>Development Server</h3>
-        <p>The default behavior of <code>npm run dev</code> is to start the development server using Vite. You can
-          modify this behavior by editing the <code>package.json</code> file. In the scripts section, you'll find the
-          first script labeled <code>"dev": "vite"</code>. You can change it to <code>"start"</code> if you want to use
-          a different command for development.</p>
-        <p>To start your development server, run <code>npm run dev</code>. The server will start on a port different
-          from the CRA default (<code>http://localhost:5173/</code>). It won't automatically redirect you to the
-          browser, so you'll need to click on the link displayed in the terminal after running the command to navigate
-          there.</p>
-        <p>To create an optimized production build of your React application, run the build command:
-          <code>npm run build</code>. This command will generate a <code>dist</code> folder containing your
-          production-ready files.</p>
-        <p>After that, you are good to go for deployment.</p>
-
-      </section>
-    </div>
-
-
-
-
-
-    <div class="container">
-
-      <button (click)="toggleInfo('third')">
-        <h1>React Folder Structure</h1>
-      </button>
-
-      <section *ngIf="showInfo.third">
-        <h1 class="title">React Folder Structure</h1>
-        <p class="description">The folder structure of a React project looks like this:</p>
-
-        <pre><code>
-    >first-flight/
-      >node_modules/
-      >public/
-        index.html
-        favicon.ico
-      >src/
-        App.css
-        App.js
-        App.test.js
-        index.css
-        index.js
-        logo.svg
-      gitignore
-      package-lock.json
-      package.json
-      README.md
-      </code></pre>
-
-        <p>For the project to build, <strong>these files must exist with exact filenames</strong>:</p>
-        <ul>
-          <li><code>public/index.html</code> is the page template;</li>
-          <li><code>src/index.js</code> is the JavaScript entry point.</li>
-        </ul>
-
-        <h2 class="section-title">React Folder Structures</h2>
-
-        <h3>node_modules</h3>
-        <p>This folder contains all the dependencies of the project. It is not recommended to modify the contents of
-          this folder.</p>
-
-        <h3>public</h3>
-        <p>This folder contains the <code>index.html</code> file, which is the entry point of the application. It is not
-          recommended to modify the contents of this folder.</p>
-        <ul>
-          <li><code>robots.txt</code> file is used to tell search engines which pages or files the crawler can or can't
-            request from your site.</li>
-          <li><code>manifest.json</code> file is used to provide metadata associated with the web application.</li>
-          <li><code>logo192.png</code> and <code>logo512.png</code> files are used to provide the logo of the web
-            application.</li>
-          <li><code>favicon.ico</code> file is used to provide the favicon of the web application.</li>
-          <li><code>index.html</code> file is used to provide the entry point of the web application.</li>
-          <li><code>%PUBLIC_URL%</code> points to the public folder.</li>
-          <li><code>meta</code> tag is used to provide the metadata of the web application.</li>
-        </ul>
-        <p><strong>Note:</strong> The public folder is accessible everywhere in the application.</p>
-
-        <h3>src</h3>
-        <p>This is the source folder of the application. It contains all the files related to the application.</p>
-        <ul>
-          <li><code>index.js</code> file is used to provide the entry point of the application.</li>
-          <li><code>index.css</code> file is used to provide the styles of the entry point of the application.</li>
-          <li><code>App.js</code> file is used to provide the root component of the application.</li>
-          <li><code>App.css</code> file is used to provide the styles of the root component of the application.</li>
-          <li><code>App.test.js</code> file is used to provide the test cases of the root component of the application.
-          </li>
-        </ul>
-
-        <h3>.gitignore</h3>
-        <p>The <code>.gitignore</code> file is used to tell Git which files or folders to ignore in a project.</p>
-
-        <h3>package-lock.json</h3>
-        <p>The <code>package-lock.json</code> file contains the exact version of the dependencies of the project. It is
-          not recommended to modify the contents of this file.</p>
-
-        <h3>package.json</h3>
-        <p>The <code>package.json</code> file contains the dependencies of the project. It is not recommended to modify
-          the contents of this file.</p>
-
-      </section>
-    </div>
-
-
-
-    
-    <div class="container">
-
-      <button (click)="toggleInfo('four')">
-        <h1>Components and Props</h1>
-      </button>
-
-      <section *ngIf="showInfo.four">
-      <h1 class="title">Components and Props</h1>
-
-      <h2 class="section-title">What is Components?</h2>
-      <p>JavaScript functions that return <code>JSX</code>.</p>
-      <p>In React, a component is a reusable piece of code that defines the structure and behavior of a part of a user
-        interface. A component is typically written as a JavaScript function or class that returns a JSX element or a
-        tree of elements.</p>
-      <p>Components are mostly used in PascalCase.</p>
-
-      <pre><code>
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    
-    function Card() ｛
-      const randomNumber = Math.random();
-      return (
-         &lt;div&gt;
-          &lt;h1&gt;Card ｛ randomNumber｝&lt;/h1&gt;
-        &lt;/div&gt;
-      );
-      ｝
-    root.render(
-      &lt;&gt;
-        &lt;Card /&gt;
-        &lt;Card /&gt;
-        &lt;Card /&gt;
-        &lt;Card /&gt;
-      &lt;/&gt;
-    );
-      </code></pre>
-
-      <p><strong>Output:</strong></p>
-      <img src="/react/03/screenshot1.png" alt="screenshot1.png" width="600px" />
-
-      <h3>Example Explanation:</h3>
-      <ul>
-        <li>Line 1 imports the ReactDOM library from the <code>react-dom/client</code> module.</li>
-        <li>Line 2 creates a React <code>root</code> on the HTML element with the ID <code>root</code>.</li>
-        <li>Lines 4 to 11 define a React functional component called <code>Card</code>.</li>
-        <li>Lines 12 to 19 render multiple instances of the <code>Card</code> component.</li>
-      </ul>
-
-      <h2 class="section-title">What is Props?</h2>
-      <p><code>props</code> is a shorthand for <code>properties</code>. It refers to a mechanism for passing data from
-        one component to another in a unidirectional flow. Props are read-only, meaning that a component cannot modify
-        the props it receives from its parent.</p>
-
-      <h3>Example 1:</h3>
-      <pre><code>
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    
-    function Greeting(props) ｛
-      return (
-         &lt;div&gt;
-          &lt;h1&gt;Hello Greeting&lt;/h1&gt;
-        &lt;/div&gt;
-      );
-      ｝
-    root.render(
-     &lt;&gt;
-        &lt;Greeting /&gt;
-      &lt;/&gt;
-    );
-      </code></pre>
-
-      <p><strong>Output:</strong> Hello Greeting</p>
-
-      <h3>Example 2:</h3>
-      <pre><code>
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    
-    function Greeting(props) ｛
-      console.log(props);
-      return (
-        &lt;div&gt;
-          &lt;h1&gt;Hello&lt;/h1&gt;
-        &lt;/div&gt;
-      );
-      ｝
-    root.render(
-      &lt;&gt;
-        &lt;Greeting name="Anand" city="Pune" /&gt;
-      &lt;/&gt;
-    );
-      </code></pre>
-
-      <p><strong>Output:</strong></p>
-      <img src="/react/03/screenshot2.png" alt="screenshot2.png" width="600px" />
-
-      <h3>Example 3:</h3>
-      <pre><code>
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    
-    function Greeting(props) ｛
-      console.log(props);
-      return (
-        &lt;div&gt;
-            <p>I am ｛props.name｝ from ｛props.city｝.</p>
-        &lt;/&gt;
-      );
-    ｝
-    root.render(
-      &lt;
-        &lt;greeting name="Anand" city="Pune"/&gt;
-      /&gt;
-    );
-      </code></pre>
-
-      <p><strong>Output:</strong></p>
-      <img src="/react/03/screenshot3.png" alt="screenshot3.png" width="600px" />
-
-      <!-- <h3>Example 4:</h3>
-      <pre><code>
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.create
-
-
-    </code></pre> -->
-      </section>
-    </div>
-
-    <div class="container">
-
-      <button (click)="toggleInfo('five')">
-        <h1>State in React</h1>
-      </button>
-
-      <section *ngIf="showInfo.five">
-        <h1 class="title">State in React</h1>
-        <p class="description">State is a built-in object that allows components to manage and store data that can
-          change over time.</p>
-
-        <h2 class="section-title">What is State?</h2>
-        <p>State is a JavaScript object that holds data that can change over time. It is used to manage the dynamic
-          behavior of a component.</p>
-
-        <h2 class="section-title">How to Use State?</h2>
-        <p>To use state in a functional component, you need to import the <code>useState</code> hook from the React
-          library.</p>
-
-        <pre><code>
-    import React, ｛ useState ｝  from 'react';
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    function Counter() ｛
-      const [count, setCount] = useState(0);
-      return (
-        &lt;div&gt;
-          &lt;h1&gt;Counter: ｛count｝&lt;/h1&gt;
-          &lt;button onClick=｛() => setCount(count + 1)｝&gt;Increment&lt;/button&gt;
-        &lt;/div&gt;
-      );
-      ｝
-    root.render(
-      &lt;&gt;
-        &lt;Counter /&gt;
-      &lt;/&gt;
-    );
-      </code></pre>
-
-        <p><strong>Output:</strong></p>
-        <img src="/react/04/screenshot1.png" alt="screenshot1.png" width="600px" />
-
-        <h2 class="section-title">Explanation of the Code</h2>
-        <ul>
-          <li>Line 1 imports the <code>useState</code> hook from the React library.</li>
-          <li>Line 2 imports the ReactDOM library from the <code>react-dom/client</code> module.</li>
-          <li>Line 3 creates a React root on the HTML element with the ID <code>root</code>.</li>
-          <li>Lines 5 to 12 define a React functional component called <code>Counter</code>.</li>
-          <li>Line 6 initializes the state variable <code>count</code> with an initial value of 0 using the
-            <code>useState</code> hook.</li>
-          <li>Line 7 returns a JSX element that displays the current count and a button to increment it.</li>
-          <li>Line 13 renders the <code>Counter</code> component inside a React fragment.</li>
-        </ul>
-
-      </section>
-
-    </div>
-
-    <div class="container">
-
-      <button (click)="toggleInfo('six')">
-        <h1>React Lifecycle Methods</h1>
-      </button>
-
-      <section *ngIf="showInfo.six">
-        <h1 class="title">React Lifecycle Methods</h1>
-        <p class="description">Lifecycle methods are special methods in React components that allow you to run code at
-          specific points in a component's lifecycle.</p>
-
-        <h2 class="section-title">Common Lifecycle Methods</h2>
-        <ul>
-          <li><code>componentDidMount()</code>: Called after the component is mounted.</li>
-          <li><code>componentDidUpdate()</code>: Called after the component is updated.</li>
-          <li><code>componentWillUnmount()</code>: Called before the component is unmounted.</li>
-        </ul>
-
-        <h2 class="section-title">Example of Lifecycle Methods</h2>
-        <pre><code>
-    import React, ｛ useEffect ｝ from 'react';
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    function LifecycleExample() ｛
-      useEffect(() => ｛
-        console.log('Component mounted');
-        return () => ｛
-          console.log('Component unmounted');
-        ｝;
-      ｝, []);
-      return (
-        &lt;div&gt;
-          &lt;h1&gt;Lifecycle Example&lt;/h1&gt;
-        &lt;/div&gt;
-      );
-      ｝
-    root.render(
-      &lt;&gt;
-        &lt;LifecycleExample /&gt;
-      &lt;/&gt;
-    );
-      </code></pre>
-
-        <p><strong>Output:</strong> When the component mounts, it will log "Component mounted" to the console. When the
-          component unmounts, it will log "Component unmounted" to the console.</p>
-
-        <h2 class="section-title">Explanation of the Code</h2>
-        <ul>
-          <li>Line 1 imports the <code>useEffect</code> hook from the React library.</li>
-          <li>Line 2 imports the ReactDOM library from the <code>react-dom/client</code> module.</li>
-          <li>Line 3 creates a React root on the HTML element with the ID <code>root</code>.</li>
-          <li>Lines 5 to 14 define a React functional component called <code>LifecycleExample</code>.</li>
-          <li>Line 6 uses the <code>useEffect</code> hook to run code when the component mounts and unmounts.</li>
-          <li>Line 7 logs "Component mounted" to the console when the component mounts.</li>
-          <li>Line 8 returns a cleanup function that logs "Component unmounted" to the console when the component
-            unmounts.</li>
-          <li>Line 9 returns a JSX element that displays "Lifecycle Example".</li>
-          <li>Line 15 renders the <code>LifecycleExample</code> component inside a React fragment.</li>
-        </ul>
-
-      </section>
-
-    </div>
-
-    <div class="container">
-
-      <button (click)="toggleInfo('seven')">
-        <h1>React Hooks</h1>
-      </button>
-
-      <section *ngIf="showInfo.seven">
-        <h1 class="title">React Hooks</h1>
-        <p class="description">Hooks are special functions in React that allow you to use state and other React
-          features in functional components.</p>
-
-        <h2 class="section-title">Commonly Used Hooks</h2>
-        <ul>
-          <li><code>useState()</code>: Allows you to add state to a functional component.</li>
-          <li><code>useEffect()</code>: Allows you to perform side effects in a functional component.</li>
-          <li><code>useContext()</code>: Allows you to access context in a functional component.</li>
-        </ul>
-
-        <h2 class="section-title">Example of useState Hook</h2>
-        <pre><code>
-    import React, ｛ useState ｝ from 'react';
-    import ReactDOM from 'react-dom/client';
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    function Counter() ｛
-      const [count, setCount] = useState(0);
-      return (
-        &lt;div&gt;
-          &lt;h1&gt;Counter: ｛count｝&lt;/h1&gt;
-          &lt;button onClick=｛() => setCount(count + 1)｝&gt;Increment&lt;/button&gt;
-        &lt;/div&gt;
-      );
-      ｝
-    root.render(
-      &lt;&gt;
-        &lt;Counter /&gt;
-      &lt;/&gt;
-    );
-      </code></pre>
-
-        <p><strong>Output:</strong></p>
-        <img src="/react/05/screenshot1.png" alt="screenshot1.png" width="600px" />
-
-        <h2 class="section-title">Explanation of the Code</h2>
-        <ul>
-          <li>Line 1 imports the <code>useState</code> hook from the React library.</li>
-          <li>Line 2 imports the ReactDOM library from the <code>react-dom/client</code> module.</li>
-          <li>Line 3 creates a React root on the HTML element with the ID <code>root</code>.</li>
-          <li>Lines 5 to 12 define a React functional component called <code>Counter</code>.</li>
-          <li>Line 6 initializes the state variable <code>count</code> with an initial value of 0 using the
-            <code>useState</code> hook.</li>
-          <li>Line 7 returns a JSX element that displays the current count and a button to increment it.</li>
-          <li>Line 13 renders the <code>Counter</code> component inside a React fragment.</li>
-        </ul>
-
-      </section>
-
-    </div>
-
-
-
-
-  </div>
+  
 </div>
